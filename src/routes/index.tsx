@@ -368,14 +368,22 @@ function Brands() {
         </p>
 
         <div className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4">
-          {brands.slice(0, 8).map((b, i) => (
+          {clients.map((c, i) => (
             <div
-              key={b}
-              className="group rounded-2xl border border-border bg-card px-6 py-8 hover:border-orange hover:shadow-glow transition-all"
+              key={c.name}
+              className="group rounded-2xl border border-border bg-card px-6 py-8 hover:border-orange hover:shadow-glow transition-all flex flex-col items-center justify-center gap-4"
               style={{ transitionDelay: `${i * 20}ms` }}
             >
-              <div className="text-lg md:text-xl font-display font-bold text-navy-deep/80 group-hover:text-navy-deep tracking-wider">
-                {b}
+              <div className="h-24 flex items-center justify-center">
+                <img
+                  src={c.logo}
+                  alt={`${c.name} logo`}
+                  className="max-h-24 max-w-full object-contain"
+                  loading="lazy"
+                />
+              </div>
+              <div className="text-sm md:text-base font-display font-semibold text-navy-deep/80 group-hover:text-navy-deep tracking-wide text-center">
+                {c.name}
               </div>
             </div>
           ))}
