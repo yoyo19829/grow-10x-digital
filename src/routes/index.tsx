@@ -364,7 +364,7 @@ function Brands() {
           Brands we're scaling <span className="text-gradient-brand">right now.</span>
         </h2>
         <p className="mt-4 text-muted-foreground max-w-xl mx-auto">
-          From bootstrapped D2C startups to funded growth-stage brands.
+From New Companies to Big brands.
         </p>
 
         <div className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4">
