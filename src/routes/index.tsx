@@ -62,18 +62,6 @@ export const Route = createFileRoute("/")({
   component: Landing,
 });
 
-const brands = [
-  "NORTHWIND",
-  "LUMEN & CO",
-  "AURORA",
-  "PIXELCRAFT",
-  "VELVET",
-  "ORBITAL",
-  "KINETIC",
-  "MONARCH",
-  "SUNDAY",
-  "HELIOS",
-];
 
 const services = [
   {
@@ -125,7 +113,6 @@ function Landing() {
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <Nav />
       <Hero />
-      <Marquee />
       <Services />
       <About />
       <Brands />
@@ -135,6 +122,7 @@ function Landing() {
     </div>
   );
 }
+
 
 function Nav() {
   return (
@@ -225,20 +213,6 @@ function Hero() {
   );
 }
 
-function Marquee() {
-  return (
-    <div className="bg-navy-deep text-primary-foreground py-6 overflow-hidden border-y border-white/10">
-      <div className="flex animate-marquee whitespace-nowrap">
-        {[...brands, ...brands].map((b, i) => (
-          <span key={i} className="mx-10 text-xl md:text-2xl font-display font-semibold tracking-wider opacity-70 hover:opacity-100 transition">
-            {b}
-            <span className="mx-10 text-orange">✦</span>
-          </span>
-        ))}
-      </div>
-    </div>
-  );
-}
 
 function Services() {
   return (
