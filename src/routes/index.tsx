@@ -25,6 +25,8 @@ import justRealEstate from "@/assets/just-real-estate.png.asset.json";
 import aawartanConstruction from "@/assets/aawartan-construction.png.asset.json";
 import tirthTravels from "@/assets/tirth-travels.jpeg.asset.json";
 import shantiJuniors from "@/assets/shanti-juniors.png.asset.json";
+import iant from "@/assets/iant.png.asset.json";
+import pinPointAstrology from "@/assets/pin-point-astrology.png.asset.json";
 
 const clients = [
   { name: "Indian Property Expert", logo: indianPropertyExpert.url },
@@ -35,6 +37,8 @@ const clients = [
   { name: "Aawartan Construction", logo: aawartanConstruction.url },
   { name: "Tirth Travels & Holiday", logo: tirthTravels.url },
   { name: "Shanti Juniors", logo: shantiJuniors.url },
+  { name: "IANT", logo: iant.url },
+  { name: "Pin Point Astrology", logo: pinPointAstrology.url },
 ];
 
 export const Route = createFileRoute("/")({
