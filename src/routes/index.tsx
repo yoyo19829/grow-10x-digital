@@ -560,8 +560,8 @@ function Footer() {
           <div>
             <div className="text-white font-semibold mb-4">Offices</div>
             <ul className="space-y-3 text-sm text-white/60">
-              <li>Ahmedabad — Krish Cubical, Thaltej</li>
-              <li>Indore — Mangal City, Vijay Nagar</li>
+              <li>Ahmedabad — 4th Floor, C Wing, Krish Cubical, Thaltej</li>
+              <li>Indore — 4th Floor, Mangal City, Vijay Nagar</li>
             </ul>
           </div>
         </div>
