@@ -21,12 +21,20 @@ import indianPropertyExpert from "@/assets/indian-property-expert.jpeg.asset.jso
 import newLifeTherapy from "@/assets/new-life-therapy.png.asset.json";
 import padmakshiJewels from "@/assets/padmakshi-jewels.png.asset.json";
 import aneriCreation from "@/assets/aneri-creation.png.asset.json";
+import justRealEstate from "@/assets/just-real-estate.png.asset.json";
+import aawartanConstruction from "@/assets/aawartan-construction.png.asset.json";
+import tirthTravels from "@/assets/tirth-travels.jpeg.asset.json";
+import shantiJuniors from "@/assets/shanti-juniors.png.asset.json";
 
 const clients = [
   { name: "Indian Property Expert", logo: indianPropertyExpert.url },
   { name: "New Life Therapy", logo: newLifeTherapy.url },
   { name: "Padmakshi Jewels", logo: padmakshiJewels.url },
   { name: "Aneri Creation", logo: aneriCreation.url },
+  { name: "Just Real Estate", logo: justRealEstate.url },
+  { name: "Aawartan Construction", logo: aawartanConstruction.url },
+  { name: "Tirth Travels & Holiday", logo: tirthTravels.url },
+  { name: "Shanti Juniors", logo: shantiJuniors.url },
 ];
 
 export const Route = createFileRoute("/")({
