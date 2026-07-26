@@ -16,7 +16,6 @@ import {
   Rocket,
 } from "lucide-react";
 import logo from "@/assets/bedifly-logo.png";
-import hero3d from "@/assets/hero-3d.jpg";
 import indianPropertyExpert from "@/assets/indian-property-expert.jpeg.asset.json";
 import newLifeTherapy from "@/assets/new-life-therapy.png.asset.json";
 import padmakshiJewels from "@/assets/padmakshi-jewels.png.asset.json";
@@ -221,17 +220,6 @@ function Hero() {
           ))}
         </div>
 
-        {/* 3d visual */}
-        <div className="relative mt-20 mx-auto max-w-4xl">
-          <div className="absolute -inset-6 bg-orange-gradient opacity-30 blur-3xl rounded-[3rem]" />
-          <img
-            src={hero3d}
-            alt="3D shapes representing Bedifly performance marketing"
-            width={1600}
-            height={1200}
-            className="relative rounded-[2rem] shadow-navy border border-white/60 animate-float-slow"
-          />
-        </div>
       </div>
     </section>
   );
