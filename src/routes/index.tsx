@@ -17,6 +17,17 @@ import {
 } from "lucide-react";
 import logo from "@/assets/bedifly-logo.png";
 import hero3d from "@/assets/hero-3d.jpg";
+import indianPropertyExpert from "@/assets/indian-property-expert.jpeg.asset.json";
+import newLifeTherapy from "@/assets/new-life-therapy.png.asset.json";
+import padmakshiJewels from "@/assets/padmakshi-jewels.png.asset.json";
+import aneriCreation from "@/assets/aneri-creation.png.asset.json";
+
+const clients = [
+  { name: "Indian Property Expert", logo: indianPropertyExpert.url },
+  { name: "New Life Therapy", logo: newLifeTherapy.url },
+  { name: "Padmakshi Jewels", logo: padmakshiJewels.url },
+  { name: "Aneri Creation", logo: aneriCreation.url },
+];
 
 export const Route = createFileRoute("/")({
   head: () => ({
