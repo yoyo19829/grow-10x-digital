@@ -186,8 +186,9 @@ function Hero() {
         </h1>
 
         <p className="mt-8 max-w-2xl mx-auto text-lg text-muted-foreground">
-          We're Bedifly — a team of media buyers, creators and strategists that
-          turn ad spend into predictable, profitable growth for D2C and service brands.
+          We're Bedifly—a performance marketing agency that turns ad spend into
+          profitable growth, achieving an average ROAS of 7x for service businesses
+          and 20x for real estate.
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
