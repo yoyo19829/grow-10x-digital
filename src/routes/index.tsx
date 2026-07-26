@@ -430,10 +430,10 @@ function ContactForm() {
 
           <div className="mt-10 space-y-5">
             <ContactRow icon={MapPin} title="Ahmedabad Office">
-              4th Floor, C Wing, Krish Cubical, Thaltej, Ahmedabad, Gujarat
+              4th Floor, C Wing, Krish Cubical, Thaltej, Ahmedabad
             </ContactRow>
             <ContactRow icon={MapPin} title="Indore Office">
-              4th Floor, Mangal City, Vijay Nagar, Indore, Madhya Pradesh
+              4th Floor, Mangal City, Vijay Nagar, Indore
             </ContactRow>
             <ContactRow icon={Mail} title="Email us">
               hello@bedifly.com
