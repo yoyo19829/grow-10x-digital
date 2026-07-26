@@ -17,6 +17,17 @@ import {
 } from "lucide-react";
 import logo from "@/assets/bedifly-logo.png";
 import hero3d from "@/assets/hero-3d.jpg";
+import indianPropertyExpert from "@/assets/indian-property-expert.jpeg.asset.json";
+import newLifeTherapy from "@/assets/new-life-therapy.png.asset.json";
+import padmakshiJewels from "@/assets/padmakshi-jewels.png.asset.json";
+import aneriCreation from "@/assets/aneri-creation.png.asset.json";
+
+const clients = [
+  { name: "Indian Property Expert", logo: indianPropertyExpert.url },
+  { name: "New Life Therapy", logo: newLifeTherapy.url },
+  { name: "Padmakshi Jewels", logo: padmakshiJewels.url },
+  { name: "Aneri Creation", logo: aneriCreation.url },
+];
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -357,14 +368,22 @@ function Brands() {
         </p>
 
         <div className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4">
-          {brands.slice(0, 8).map((b, i) => (
+          {clients.map((c, i) => (
             <div
-              key={b}
-              className="group rounded-2xl border border-border bg-card px-6 py-8 hover:border-orange hover:shadow-glow transition-all"
+              key={c.name}
+              className="group rounded-2xl border border-border bg-card px-6 py-8 hover:border-orange hover:shadow-glow transition-all flex flex-col items-center justify-center gap-4"
               style={{ transitionDelay: `${i * 20}ms` }}
             >
-              <div className="text-lg md:text-xl font-display font-bold text-navy-deep/80 group-hover:text-navy-deep tracking-wider">
-                {b}
+              <div className="h-24 flex items-center justify-center">
+                <img
+                  src={c.logo}
+                  alt={`${c.name} logo`}
+                  className="max-h-24 max-w-full object-contain"
+                  loading="lazy"
+                />
+              </div>
+              <div className="text-sm md:text-base font-display font-semibold text-navy-deep/80 group-hover:text-navy-deep tracking-wide text-center">
+                {c.name}
               </div>
             </div>
           ))}
