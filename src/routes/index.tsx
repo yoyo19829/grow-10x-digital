@@ -273,10 +273,14 @@ function Services() {
           <div className="text-xs uppercase tracking-[0.2em] text-orange font-semibold mb-4">
             Our services
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold text-navy-deep leading-[1.05]">
-            Lead Generation <span className="text-orange">•</span> Social Media Management <span className="text-orange">•</span> <span className="text-gradient-orange">Website Development</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-navy-deep leading-[1.1] tracking-tight">
+            <span className="block">Lead Generation</span>
+            <span className="block text-navy-deep/40 text-2xl sm:text-3xl md:text-4xl lg:text-5xl my-1">+</span>
+            <span className="block">Social Media Management</span>
+            <span className="block text-navy-deep/40 text-2xl sm:text-3xl md:text-4xl lg:text-5xl my-1">+</span>
+            <span className="block text-gradient-orange">Website Development</span>
           </h2>
-          <p className="mt-5 text-muted-foreground text-lg">
+          <p className="mt-6 text-muted-foreground text-base md:text-lg max-w-xl">
             We help businesses grow with 10+ years of proven expertise. Every strategy is tailored to your goals for measurable results. Check out our packages.
           </p>
         </div>
