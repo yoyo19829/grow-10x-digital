@@ -274,10 +274,10 @@ function Services() {
             Our services
           </div>
           <h2 className="text-4xl md:text-6xl font-bold text-navy-deep leading-[1.05]">
-            Three engines. <span className="text-gradient-orange">One growth machine.</span>
+            Lead Generation <span className="text-orange">•</span> Social Media Management <span className="text-orange">•</span> <span className="text-gradient-orange">Website Development</span>
           </h2>
           <p className="mt-5 text-muted-foreground text-lg">
-            Every brand we work with gets a custom mix of paid, organic and creative — orchestrated by a senior strategist.
+            We help businesses grow with 10+ years of proven expertise. Every strategy is tailored to your goals for measurable results. Check out our packages.
           </p>
         </div>
 
