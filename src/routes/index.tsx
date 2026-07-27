@@ -63,29 +63,144 @@ export const Route = createFileRoute("/")({
 });
 
 
-const services = [
+type Pkg = {
+  emoji: string;
+  name: string;
+  tagline: string;
+  price: number;
+  highlight?: boolean;
+  sections: { title: string; items: string[] }[];
+  note?: string;
+};
+
+const packages: Pkg[] = [
   {
-    icon: Target,
-    tag: "01 / Performance",
-    title: "Performance Marketing",
-    desc: "Meta, Google & YouTube ads engineered around your ROAS. We obsess over funnels, creatives and unit economics.",
-    points: ["Meta & Google Ads", "Conversion-first funnels", "Weekly ROAS reporting"],
+    emoji: "🚀",
+    name: "Lead Generation Ignite",
+    tagline: "Perfect for businesses starting their lead generation journey.",
+    price: 7999,
+    sections: [
+      { title: "Lead Generation Platform", items: ["Meta Ads (Facebook & Instagram)"] },
+      {
+        title: "Lead Collection Options",
+        items: ["Meta Instant Forms", "Phone Calls", "WhatsApp", "Google Sheets Integration"],
+      },
+      {
+        title: "What's Included",
+        items: [
+          "Complete Campaign Setup",
+          "Audience Research & Targeting",
+          "Professional Ad Copywriting",
+          "High-Converting Ad Creatives (Static & Video)",
+          "Meta Pixel Setup",
+          "Meta Conversion API (CAPI) Integration",
+          "Conversion Tracking",
+          "Campaign Monitoring & Optimization",
+          "Weekly Performance Reports",
+          "Dedicated Account Manager",
+          "Ongoing Technical Support",
+        ],
+      },
+    ],
   },
   {
-    icon: Search,
-    tag: "02 / Organic",
-    title: "SEO & Content",
-    desc: "Rank for the searches that actually make you money. Technical SEO, content strategy and topical authority.",
-    points: ["Technical SEO audits", "Content that ranks", "Backlink acquisition"],
+    emoji: "📈",
+    name: "Lead Generation Momentum",
+    tagline: "Built for businesses ready to scale consistently.",
+    price: 14999,
+    highlight: true,
+    sections: [
+      {
+        title: "Lead Generation Platform",
+        items: ["Meta Ads or Google Ads (Platform selected based on your business objectives)"],
+      },
+      {
+        title: "Lead Collection Options",
+        items: [
+          "High-Speed Next.js Landing Page",
+          "Meta Instant Forms",
+          "Phone Calls",
+          "WhatsApp",
+          "Google Sheets Integration",
+        ],
+      },
+      {
+        title: "What's Included",
+        items: [
+          "Everything in Ignite",
+          "Fast Loading Next.js Landing Page",
+          "Meta Pixel + Meta Conversion API (CAPI)",
+          "Google Conversion Tracking",
+          "Landing Page Optimization",
+          "A/B Testing",
+          "Multiple Ad Creative Variations",
+          "Remarketing Campaigns",
+          "Advanced Audience Research",
+          "CRM Integration (if available)",
+          "Bi-Weekly Strategy Calls",
+          "Priority Support",
+          "Detailed Performance Reports",
+        ],
+      },
+    ],
+    note: "Domain name and hosting will be provided by the client.",
   },
   {
-    icon: Megaphone,
-    tag: "03 / Creative",
-    title: "Social & Creative Studio",
-    desc: "Scroll-stopping reels, UGC and static creatives produced in-house — built to test, learn and scale fast.",
-    points: ["Reels & UGC production", "Ad creative testing", "Brand social management"],
+    emoji: "♾️",
+    name: "Lead Generation Infinity",
+    tagline: "The complete performance marketing solution for businesses focused on aggressive growth.",
+    price: 24999,
+    sections: [
+      {
+        title: "Lead Generation Platform",
+        items: ["Meta Ads + Google Ads (or the best combination based on your business)"],
+      },
+      {
+        title: "Lead Collection Options",
+        items: [
+          "High-Speed Next.js Landing Page",
+          "Meta Instant Forms",
+          "Phone Calls",
+          "WhatsApp",
+          "CRM Integration",
+          "Google Sheets",
+        ],
+      },
+      {
+        title: "Premium Growth Features",
+        items: [
+          "Everything in Momentum",
+          "Custom Fast Loading Next.js Landing Page",
+          "Complete Sales Funnel Setup",
+          "Meta Pixel + Meta Conversion API (CAPI)",
+          "Google Tag Manager Setup",
+          "Google Analytics 4 Setup",
+          "Advanced Conversion Tracking",
+          "Lead Quality Optimization",
+          "Advanced Remarketing Campaigns",
+          "AI-Powered Lead Qualification (Optional)",
+          "Email & WhatsApp Follow-up Integration",
+          "Monthly Creative Refresh",
+          "Competitor Analysis",
+          "Advanced A/B Testing",
+          "Weekly Strategy Meetings",
+          "Real-Time Performance Dashboard",
+          "Monthly Growth Review",
+          "Dedicated Performance Marketing Manager",
+        ],
+      },
+    ],
+    note: "Domain name and hosting will be provided by the client.",
   },
 ];
+
+const termOffers = [
+  { months: 3, off: 10 },
+  { months: 6, off: 20 },
+  { months: 12, off: 30 },
+];
+
+const formatINR = (n: number) => `₹${n.toLocaleString("en-IN")}`;
 
 const testimonials = [
   {
