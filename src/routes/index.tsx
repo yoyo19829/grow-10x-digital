@@ -197,13 +197,15 @@ function Hero() {
         {/* stats */}
         <div className="mt-16 grid grid-cols-3 gap-4 max-w-3xl mx-auto">
           {[
-            { k: "10+", v: "Years scaling brands" },
-            { k: "50+", v: "Brands served" },
-            { k: "₹10Cr+", v: "Ad spend managed" },
+            { target: 10, suffix: "+", label: "Years scaling brands" },
+            { target: 50, suffix: "+", label: "Brands served" },
+            { target: 10, prefix: "₹", suffix: "Cr+", label: "Ad spend managed" },
           ].map((s) => (
-            <div key={s.v} className="glass rounded-2xl p-5 shadow-soft">
-              <div className="text-3xl md:text-4xl font-bold text-gradient-brand">{s.k}</div>
-              <div className="text-xs md:text-sm text-muted-foreground mt-1">{s.v}</div>
+            <div key={s.label} className="glass rounded-2xl p-5 shadow-soft">
+              <div className="text-3xl md:text-4xl font-bold text-gradient-brand">
+                <Counter target={s.target} prefix={s.prefix} suffix={s.suffix} />
+              </div>
+              <div className="text-xs md:text-sm text-muted-foreground mt-1">{s.label}</div>
             </div>
           ))}
         </div>
