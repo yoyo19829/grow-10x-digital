@@ -159,7 +159,7 @@ function Hero() {
       <div className="relative max-w-6xl mx-auto text-center">
         <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-1.5 text-xs font-semibold text-navy-deep mb-8">
           <Sparkles className="h-3.5 w-3.5 text-orange" />
-          Performance marketing agency · Ahmedabad & Indore
+          Performance marketing agency
         </div>
 
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.02] tracking-tight">
