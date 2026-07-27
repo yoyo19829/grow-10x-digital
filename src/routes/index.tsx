@@ -388,11 +388,11 @@ function Services() {
           <div className="text-xs uppercase tracking-[0.2em] text-orange font-semibold mb-4">
             Our services
           </div>
-          <h2 className="font-bold text-navy-deep leading-[1.15] tracking-tight text-[clamp(1.25rem,4.5vw,2.75rem)] whitespace-nowrap">
+          <h2 className="font-bold text-navy-deep leading-[1.15] tracking-tight whitespace-nowrap text-[clamp(0.85rem,3.2vw,2.75rem)]">
             Lead Generation
-            <span className="text-navy-deep/40 mx-2">+</span>
+            <span className="text-navy-deep/40 mx-1 sm:mx-2">+</span>
             Social Media Management
-            <span className="text-navy-deep/40 mx-2">+</span>
+            <span className="text-navy-deep/40 mx-1 sm:mx-2">+</span>
             <span className="text-gradient-orange">Website Development</span>
           </h2>
           <p className="mt-6 text-muted-foreground text-base md:text-lg max-w-xl">
