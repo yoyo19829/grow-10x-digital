@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   ArrowRight,
   Sparkles,
@@ -159,7 +159,7 @@ function Hero() {
       <div className="relative max-w-6xl mx-auto text-center">
         <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-1.5 text-xs font-semibold text-navy-deep mb-8">
           <Sparkles className="h-3.5 w-3.5 text-orange" />
-          Performance marketing agency · Ahmedabad & Indore
+          Performance marketing agency
         </div>
 
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.02] tracking-tight">
@@ -197,19 +197,70 @@ function Hero() {
         {/* stats */}
         <div className="mt-16 grid grid-cols-3 gap-4 max-w-3xl mx-auto">
           {[
-            { k: "10+", v: "Years scaling brands" },
-            { k: "50+", v: "Brands served" },
-            { k: "₹10Cr+", v: "Ad spend managed" },
+            { target: 10, suffix: "+", label: "Years scaling brands" },
+            { target: 50, suffix: "+", label: "Brands served" },
+            { target: 10, prefix: "₹", suffix: "Cr+", label: "Ad spend managed" },
           ].map((s) => (
-            <div key={s.v} className="glass rounded-2xl p-5 shadow-soft">
-              <div className="text-3xl md:text-4xl font-bold text-gradient-brand">{s.k}</div>
-              <div className="text-xs md:text-sm text-muted-foreground mt-1">{s.v}</div>
+            <div key={s.label} className="glass rounded-2xl p-5 shadow-soft">
+              <div className="text-3xl md:text-4xl font-bold text-gradient-brand">
+                <Counter target={s.target} prefix={s.prefix} suffix={s.suffix} />
+              </div>
+              <div className="text-xs md:text-sm text-muted-foreground mt-1">{s.label}</div>
             </div>
           ))}
         </div>
 
       </div>
     </section>
+  );
+}
+
+function Counter({
+  target,
+  prefix = "",
+  suffix = "",
+  duration = 1800,
+}: {
+  target: number;
+  prefix?: string;
+  suffix?: string;
+  duration?: number;
+}) {
+  const [value, setValue] = useState(0);
+  const ref = useRef<HTMLSpanElement | null>(null);
+  const started = useRef(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting && !started.current) {
+            started.current = true;
+            const start = performance.now();
+            const tick = (now: number) => {
+              const p = Math.min(1, (now - start) / duration);
+              const eased = 1 - Math.pow(1 - p, 3);
+              setValue(Math.round(target * eased));
+              if (p < 1) requestAnimationFrame(tick);
+            };
+            requestAnimationFrame(tick);
+          }
+        });
+      },
+      { threshold: 0.4 },
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, [target, duration]);
+
+  return (
+    <span ref={ref}>
+      {prefix}
+      {value}
+      {suffix}
+    </span>
   );
 }
 
@@ -223,10 +274,10 @@ function Services() {
             Our services
           </div>
           <h2 className="text-4xl md:text-6xl font-bold text-navy-deep leading-[1.05]">
-            Three engines. <span className="text-gradient-orange">One growth machine.</span>
+            Lead Generation <span className="text-orange">•</span> Social Media Management <span className="text-orange">•</span> <span className="text-gradient-orange">Website Development</span>
           </h2>
           <p className="mt-5 text-muted-foreground text-lg">
-            Every brand we work with gets a custom mix of paid, organic and creative — orchestrated by a senior strategist.
+            We help businesses grow with 10+ years of proven expertise. Every strategy is tailored to your goals for measurable results. Check out our packages.
           </p>
         </div>
 
