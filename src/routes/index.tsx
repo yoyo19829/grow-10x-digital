@@ -63,29 +63,144 @@ export const Route = createFileRoute("/")({
 });
 
 
-const services = [
+type Pkg = {
+  emoji: string;
+  name: string;
+  tagline: string;
+  price: number;
+  highlight?: boolean;
+  sections: { title: string; items: string[] }[];
+  note?: string;
+};
+
+const packages: Pkg[] = [
   {
-    icon: Target,
-    tag: "01 / Performance",
-    title: "Performance Marketing",
-    desc: "Meta, Google & YouTube ads engineered around your ROAS. We obsess over funnels, creatives and unit economics.",
-    points: ["Meta & Google Ads", "Conversion-first funnels", "Weekly ROAS reporting"],
+    emoji: "🚀",
+    name: "Lead Generation Ignite",
+    tagline: "Perfect for businesses starting their lead generation journey.",
+    price: 7999,
+    sections: [
+      { title: "Lead Generation Platform", items: ["Meta Ads (Facebook & Instagram)"] },
+      {
+        title: "Lead Collection Options",
+        items: ["Meta Instant Forms", "Phone Calls", "WhatsApp", "Google Sheets Integration"],
+      },
+      {
+        title: "What's Included",
+        items: [
+          "Complete Campaign Setup",
+          "Audience Research & Targeting",
+          "Professional Ad Copywriting",
+          "High-Converting Ad Creatives (Static & Video)",
+          "Meta Pixel Setup",
+          "Meta Conversion API (CAPI) Integration",
+          "Conversion Tracking",
+          "Campaign Monitoring & Optimization",
+          "Weekly Performance Reports",
+          "Dedicated Account Manager",
+          "Ongoing Technical Support",
+        ],
+      },
+    ],
   },
   {
-    icon: Search,
-    tag: "02 / Organic",
-    title: "SEO & Content",
-    desc: "Rank for the searches that actually make you money. Technical SEO, content strategy and topical authority.",
-    points: ["Technical SEO audits", "Content that ranks", "Backlink acquisition"],
+    emoji: "📈",
+    name: "Lead Generation Momentum",
+    tagline: "Built for businesses ready to scale consistently.",
+    price: 14999,
+    highlight: true,
+    sections: [
+      {
+        title: "Lead Generation Platform",
+        items: ["Meta Ads or Google Ads (Platform selected based on your business objectives)"],
+      },
+      {
+        title: "Lead Collection Options",
+        items: [
+          "High-Speed Next.js Landing Page",
+          "Meta Instant Forms",
+          "Phone Calls",
+          "WhatsApp",
+          "Google Sheets Integration",
+        ],
+      },
+      {
+        title: "What's Included",
+        items: [
+          "Everything in Ignite",
+          "Fast Loading Next.js Landing Page",
+          "Meta Pixel + Meta Conversion API (CAPI)",
+          "Google Conversion Tracking",
+          "Landing Page Optimization",
+          "A/B Testing",
+          "Multiple Ad Creative Variations",
+          "Remarketing Campaigns",
+          "Advanced Audience Research",
+          "CRM Integration (if available)",
+          "Bi-Weekly Strategy Calls",
+          "Priority Support",
+          "Detailed Performance Reports",
+        ],
+      },
+    ],
+    note: "Domain name and hosting will be provided by the client.",
   },
   {
-    icon: Megaphone,
-    tag: "03 / Creative",
-    title: "Social & Creative Studio",
-    desc: "Scroll-stopping reels, UGC and static creatives produced in-house — built to test, learn and scale fast.",
-    points: ["Reels & UGC production", "Ad creative testing", "Brand social management"],
+    emoji: "♾️",
+    name: "Lead Generation Infinity",
+    tagline: "The complete performance marketing solution for businesses focused on aggressive growth.",
+    price: 24999,
+    sections: [
+      {
+        title: "Lead Generation Platform",
+        items: ["Meta Ads + Google Ads (or the best combination based on your business)"],
+      },
+      {
+        title: "Lead Collection Options",
+        items: [
+          "High-Speed Next.js Landing Page",
+          "Meta Instant Forms",
+          "Phone Calls",
+          "WhatsApp",
+          "CRM Integration",
+          "Google Sheets",
+        ],
+      },
+      {
+        title: "Premium Growth Features",
+        items: [
+          "Everything in Momentum",
+          "Custom Fast Loading Next.js Landing Page",
+          "Complete Sales Funnel Setup",
+          "Meta Pixel + Meta Conversion API (CAPI)",
+          "Google Tag Manager Setup",
+          "Google Analytics 4 Setup",
+          "Advanced Conversion Tracking",
+          "Lead Quality Optimization",
+          "Advanced Remarketing Campaigns",
+          "AI-Powered Lead Qualification (Optional)",
+          "Email & WhatsApp Follow-up Integration",
+          "Monthly Creative Refresh",
+          "Competitor Analysis",
+          "Advanced A/B Testing",
+          "Weekly Strategy Meetings",
+          "Real-Time Performance Dashboard",
+          "Monthly Growth Review",
+          "Dedicated Performance Marketing Manager",
+        ],
+      },
+    ],
+    note: "Domain name and hosting will be provided by the client.",
   },
 ];
+
+const termOffers = [
+  { months: 3, off: 10 },
+  { months: 6, off: 20 },
+  { months: 12, off: 30 },
+];
+
+const formatINR = (n: number) => `₹${n.toLocaleString("en-IN")}`;
 
 const testimonials = [
   {
@@ -269,57 +384,151 @@ function Services() {
   return (
     <section id="services" className="relative py-28 px-6">
       <div className="max-w-6xl mx-auto">
-        <div className="max-w-2xl">
+        <div className="max-w-3xl">
           <div className="text-xs uppercase tracking-[0.2em] text-orange font-semibold mb-4">
             Our services
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-navy-deep leading-[1.1] tracking-tight">
-            <span className="block">Lead Generation</span>
-            <span className="block text-navy-deep/40 text-2xl sm:text-3xl md:text-4xl lg:text-5xl my-1">+</span>
-            <span className="block">Social Media Management</span>
-            <span className="block text-navy-deep/40 text-2xl sm:text-3xl md:text-4xl lg:text-5xl my-1">+</span>
-            <span className="block text-gradient-orange">Website Development</span>
+          <h2 className="font-bold text-navy-deep leading-[1.15] tracking-tight whitespace-nowrap text-[clamp(0.85rem,3.2vw,2.75rem)]">
+            Lead Generation
+            <span className="text-navy-deep/40 mx-1 sm:mx-2">+</span>
+            Social Media Management
+            <span className="text-navy-deep/40 mx-1 sm:mx-2">+</span>
+            <span className="text-gradient-orange">Website Development</span>
           </h2>
           <p className="mt-6 text-muted-foreground text-base md:text-lg max-w-xl">
-            We help businesses grow with 10+ years of proven expertise. Every strategy is tailored to your goals for measurable results. Check out our packages.
+            We help businesses grow with 10+ years of proven expertise. Every
+            strategy is tailored to your goals for measurable results. Check out
+            our packages.
           </p>
         </div>
 
-        <div className="mt-16 grid gap-6 md:grid-cols-3">
-          {services.map((s, i) => (
-            <div
-              key={s.title}
-              className="group relative rounded-3xl bg-card border border-border p-8 shadow-soft hover:shadow-navy hover:-translate-y-2 transition-all overflow-hidden"
-              style={{ transitionDelay: `${i * 30}ms` }}
-            >
-              <div className="absolute -top-16 -right-16 h-40 w-40 rounded-full bg-orange/10 blur-2xl group-hover:bg-orange/25 transition" />
-              <div className="relative">
-                <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-orange-gradient text-white shadow-glow">
-                  <s.icon className="h-6 w-6" />
-                </div>
-                <div className="mt-6 text-xs font-mono uppercase tracking-widest text-muted-foreground">
-                  {s.tag}
-                </div>
-                <h3 className="mt-2 text-2xl font-bold text-navy-deep">{s.title}</h3>
-                <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-                  {s.desc}
-                </p>
-                <ul className="mt-6 space-y-2">
-                  {s.points.map((p) => (
-                    <li key={p} className="flex items-center gap-2 text-sm text-foreground/80">
-                      <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-orange/15 text-orange">
-                        <Check className="h-3 w-3" />
-                      </span>
-                      {p}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
+        <div className="mt-16 grid gap-6 lg:grid-cols-3 items-start">
+          {packages.map((p, i) => (
+            <PackageCard key={p.name} pkg={p} index={i} />
           ))}
         </div>
       </div>
     </section>
+  );
+}
+
+function PackageCard({ pkg, index }: { pkg: Pkg; index: number }) {
+  const [term, setTerm] = useState(0); // index into termOffers, 0 = base (no discount)
+  const offer = term === 0 ? null : termOffers[term - 1];
+  const monthly = offer ? Math.round(pkg.price * (1 - offer.off / 100)) : pkg.price;
+
+  return (
+    <div
+      className={`group relative rounded-3xl border p-8 shadow-soft hover:shadow-navy hover:-translate-y-1 transition-all overflow-hidden flex flex-col ${
+        pkg.highlight
+          ? "bg-navy-deep text-primary-foreground border-navy-deep"
+          : "bg-card border-border"
+      }`}
+      style={{ transitionDelay: `${index * 40}ms` }}
+    >
+      {pkg.highlight && (
+        <div className="absolute top-5 right-5 text-[10px] font-bold uppercase tracking-widest bg-orange-gradient text-white rounded-full px-3 py-1 shadow-glow">
+          Most Popular
+        </div>
+      )}
+      <div className="absolute -top-16 -right-16 h-40 w-40 rounded-full bg-orange/10 blur-2xl group-hover:bg-orange/25 transition" />
+
+      <div className="relative">
+        <div className="text-3xl">{pkg.emoji}</div>
+        <h3 className={`mt-3 text-2xl font-bold ${pkg.highlight ? "text-white" : "text-navy-deep"}`}>
+          {pkg.name}
+        </h3>
+        <p className={`mt-2 text-sm leading-relaxed ${pkg.highlight ? "text-white/70" : "text-muted-foreground"}`}>
+          {pkg.tagline}
+        </p>
+
+        <div className="mt-6">
+          <div className="flex items-baseline gap-2">
+            <span className={`text-4xl font-bold ${pkg.highlight ? "text-orange" : "text-navy-deep"}`}>
+              {formatINR(monthly)}
+            </span>
+            <span className={`text-sm ${pkg.highlight ? "text-white/60" : "text-muted-foreground"}`}>
+              /month
+            </span>
+          </div>
+          {offer && (
+            <div className={`mt-1 text-xs ${pkg.highlight ? "text-white/70" : "text-muted-foreground"}`}>
+              <span className="line-through mr-2">{formatINR(pkg.price)}</span>
+              <span className="text-orange font-semibold">{offer.off}% OFF · {offer.months} months</span>
+            </div>
+          )}
+        </div>
+
+        <div className="mt-5 grid grid-cols-4 gap-1.5">
+          <button
+            type="button"
+            onClick={() => setTerm(0)}
+            className={`text-[11px] font-semibold rounded-full py-2 transition ${
+              term === 0
+                ? "bg-orange-gradient text-white shadow-glow"
+                : pkg.highlight
+                  ? "bg-white/10 text-white/80 hover:bg-white/20"
+                  : "bg-secondary text-navy-deep hover:bg-secondary/80"
+            }`}
+          >
+            1 mo
+          </button>
+          {termOffers.map((o, idx) => (
+            <button
+              type="button"
+              key={o.months}
+              onClick={() => setTerm(idx + 1)}
+              className={`text-[11px] font-semibold rounded-full py-2 transition ${
+                term === idx + 1
+                  ? "bg-orange-gradient text-white shadow-glow"
+                  : pkg.highlight
+                    ? "bg-white/10 text-white/80 hover:bg-white/20"
+                    : "bg-secondary text-navy-deep hover:bg-secondary/80"
+              }`}
+            >
+              {o.months}mo · {o.off}%
+            </button>
+          ))}
+        </div>
+
+        <a
+          href="#contact"
+          className={`mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition ${
+            pkg.highlight
+              ? "bg-orange-gradient text-white shadow-glow hover:opacity-90"
+              : "bg-navy-deep text-primary-foreground hover:bg-navy shadow-navy"
+          }`}
+        >
+          Get Started <ArrowRight className="h-4 w-4" />
+        </a>
+
+        <div className="mt-8 space-y-6">
+          {pkg.sections.map((sec) => (
+            <div key={sec.title}>
+              <div className={`text-xs font-bold uppercase tracking-widest mb-3 ${pkg.highlight ? "text-orange" : "text-orange"}`}>
+                {sec.title}
+              </div>
+              <ul className="space-y-2">
+                {sec.items.map((it) => (
+                  <li key={it} className={`flex items-start gap-2 text-sm ${pkg.highlight ? "text-white/85" : "text-foreground/85"}`}>
+                    <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-orange/15 text-orange">
+                      <Check className="h-3 w-3" />
+                    </span>
+                    <span>{it}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        {pkg.note && (
+          <div className={`mt-6 text-xs italic ${pkg.highlight ? "text-white/60" : "text-muted-foreground"}`}>
+            Note: {pkg.note}
+          </div>
+        )}
+      </div>
+    </div>
   );
 }
 
