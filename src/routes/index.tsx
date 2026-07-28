@@ -205,21 +205,27 @@ const formatINR = (n: number) => `₹${n.toLocaleString("en-IN")}`;
 const testimonials = [
   {
     quote:
-      "Bedifly took our monthly revenue from ₹18L to ₹1.9Cr in under a year. Their creative testing engine is unreal.",
-    name: "Ridhima Shah",
-    role: "Founder, Luméa Skincare",
+      "I am a channel partner in real estate business and I tried earlier lead generation packages from so many companies like 99 acre and more but nothing worked — less than 5% site visits. But after Bedifly, the quality improved a lot — more than 25% site visits and around 3% conversion rate. My business skyrocketed. Everyone should try at least once.",
+    name: "Vijay Desai",
+    role: "Founder, Indian Property Expert",
   },
   {
     quote:
-      "The most transparent agency we've ever worked with. Real dashboards, real ROAS, real growth — no fluff.",
-    name: "Karan Mehta",
-    role: "CMO, Northwind Apparel",
+      "Bedifly ke saath kaam karke humein lead quality mein kaafi achha improvement dekhne ko mila. Pehle bahut saare leads sirf enquiry tak hi limited rehte the, lekin ab lagbhag 20% leads site visit tak pahunch rahe hain aur 2% ke aas-paas booking conversion mil raha hai. Sabse achhi baat yeh hai ki unka focus sirf lead quantity par nahi, balki genuine buyers lane par hota hai.",
+    name: "Narendra Sharma",
+    role: "Founder, Puja Realty",
   },
   {
     quote:
-      "We finally have a team that thinks like founders. They shipped 40+ creatives in the first month.",
-    name: "Ananya Kapoor",
-    role: "Head of Growth, Orbital",
+      "Travel business always depends on social media engagement and Bedifly knows it very well because of their high engagement reels and Meta ads expertise. I generated 10,000 leads in last 4 months with conversion rate of 5%.",
+    name: "Amit Khare",
+    role: "Founder, Lake Tours & Travels",
+  },
+  {
+    quote:
+      "Must try — they are very good in it whatever they do. I am in interior designing business, converting more than 5 clients per month with a project cost around ₹15 lac+.",
+    name: "Divya Jamini",
+    role: "Founder, Aristo Spaces",
   },
 ];
 
