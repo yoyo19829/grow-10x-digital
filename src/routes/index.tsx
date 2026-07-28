@@ -384,15 +384,15 @@ function Services() {
   return (
     <section id="services" className="relative py-28 px-6">
       <div className="max-w-6xl mx-auto">
-        <div className="max-w-3xl">
+        <div className="max-w-6xl">
           <div className="text-xs uppercase tracking-[0.2em] text-orange font-semibold mb-4">
             Our services
           </div>
-          <h2 className="font-bold text-navy-deep leading-[1.15] tracking-tight text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem]">
+          <h2 className="font-bold text-navy-deep leading-[1.15] tracking-tight flex flex-wrap items-center gap-x-1 sm:gap-x-2 gap-y-1 text-xl sm:text-2xl md:text-3xl lg:text-[2.5rem]">
             <span className="whitespace-nowrap">Lead Generation</span>
-            <span className="text-navy-deep/40 mx-1 sm:mx-2">+</span>
+            <span className="text-navy-deep/40">+</span>
             <span className="whitespace-nowrap">Social Media Management</span>
-            <span className="text-navy-deep/40 mx-1 sm:mx-2">+</span>
+            <span className="text-navy-deep/40">+</span>
             <span className="text-gradient-orange whitespace-nowrap">Website Development</span>
           </h2>
           <p className="mt-6 text-muted-foreground text-base md:text-lg max-w-xl">
