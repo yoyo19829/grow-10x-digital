@@ -298,7 +298,7 @@ const termOffers = [
   { months: 12, off: 30 },
 ];
 
-const formatINR = (n: number) => `₹${n.toLocaleString("en-IN")}`;
+const formatINR = (n: number) => n.toLocaleString("en-IN");
 
 const testimonials = [
   {
@@ -321,7 +321,7 @@ const testimonials = [
   },
   {
     quote:
-      "Must try — they are very good in it whatever they do. I am in interior designing business, converting more than 5 clients per month with a project cost around ₹15 lac+.",
+      "Must try — they are very good in it whatever they do. I am in interior designing business, converting more than 5 clients per month with a project cost around 15 lac+.",
     name: "Divya Jamini",
     role: "Founder, Aristo Spaces",
   },
@@ -418,7 +418,7 @@ function Hero() {
           {[
             { target: 10, suffix: "+", label: "Years scaling brands" },
             { target: 50, suffix: "+", label: "Brands served" },
-            { target: 10, prefix: "₹", suffix: "Cr+", label: "Ad spend managed" },
+            { target: 10, prefix: "", suffix: "Cr+", label: "Ad spend managed" },
           ].map((s) => (
             <div key={s.label} className="glass rounded-2xl p-5 shadow-soft">
               <div className="text-3xl md:text-4xl font-bold text-gradient-brand">
@@ -824,14 +824,14 @@ function ContactForm() {
             <Field label="Company" name="company" placeholder="Luméa Skincare" />
           </div>
           <Field label="Work email" name="email" type="email" placeholder="you@brand.com" />
-          <Field label="Monthly ad budget" name="budget" placeholder="₹5L – ₹10L" />
+          <Field label="Monthly ad budget" name="budget" placeholder="5L – 10L" />
           <div>
             <label className="block text-xs font-semibold text-navy-deep mb-2 uppercase tracking-wider">
               Tell us about your goals
             </label>
             <textarea
               rows={4}
-              placeholder="We want to scale our D2C skincare brand from ₹40L to ₹2Cr / month…"
+              placeholder="We want to scale our D2C skincare brand from 40L to 2Cr / month…"
               className="w-full rounded-2xl border border-border bg-white/70 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-orange focus:border-orange transition"
             />
           </div>
