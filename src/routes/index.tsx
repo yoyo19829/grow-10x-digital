@@ -224,66 +224,14 @@ const packages: Pkg[] = [
   {
     emoji: "👑",
     name: "Social Media + Lead Generation Elite",
-    tagline: "The ultimate all-in-one package — Infinity lead gen paired with full social media management.",
-    price: 34999,
+    tagline: "The ultimate all-in-one package — Momentum lead gen paired with full social media management.",
+    price: 27999,
     sections: [
       {
-        title: "Lead Generation Platform",
-        items: ["Meta Ads + Google Ads (or the best combination based on your business)"],
-      },
-      {
-        title: "Lead Collection Options",
+        title: "What's Included",
         items: [
-          "High-Speed Next.js Landing Page",
-          "Meta Instant Forms",
-          "Phone Calls",
-          "WhatsApp",
-          "CRM Integration",
-          "Google Sheets",
-        ],
-      },
-      {
-        title: "Premium Growth Features",
-        items: [
-          "Everything in Momentum",
-          "Custom Fast Loading Next.js Landing Page",
-          "Complete Sales Funnel Setup",
-          "Meta Pixel + Meta Conversion API (CAPI)",
-          "Google Tag Manager Setup",
-          "Google Analytics 4 Setup",
-          "Advanced Conversion Tracking",
-          "Lead Quality Optimization",
-          "Advanced Remarketing Campaigns",
-          "AI-Powered Lead Qualification (Optional)",
-          "Email & WhatsApp Follow-up Integration",
-          "Monthly Creative Refresh",
-          "Competitor Analysis",
-          "Advanced A/B Testing",
-          "Weekly Strategy Meetings",
-          "Real-Time Performance Dashboard",
-          "Monthly Growth Review",
-          "Dedicated Performance Marketing Manager",
-        ],
-      },
-      {
-        title: "Social Media Management",
-        items: [
-          "8 High-Quality Creative Posts",
-          "8 Engaging Reels (Video Content)",
-          "Festival & Special Occasion Creatives",
-          "Monthly Content Calendar & Planning",
-          "Caption Writing with Strong CTAs",
-          "Hashtag & Posting Strategy",
-        ],
-      },
-      {
-        title: "💡 Content & Growth Strategy",
-        items: [
-          "Ad Creative Concepts & Hook Ideas",
-          "High-Converting Ad Copy & Captions",
-          "Content Strategy for Better Reach & Engagement",
-          "Competitor Analysis & Market Insights",
-          "Brand Positioning Recommendations",
+          "Everything included in Lead Generation Momentum package",
+          "Everything included in Social Media Management package",
         ],
       },
     ],
@@ -785,6 +733,7 @@ function Testimonials() {
 
 function ContactForm() {
   const [sent, setSent] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
   return (
     <section id="contact" className="relative py-28 px-6">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-14 items-start">
@@ -808,18 +757,31 @@ function ContactForm() {
               4th Floor, Mangal City, Vijay Nagar, Indore
             </ContactRow>
             <ContactRow icon={Mail} title="Email us">
-              hello@bedifly.com
+              info@bedifly.com
             </ContactRow>
             <ContactRow icon={Phone} title="Call us">
-              +91 00000 00000
+              +91 97524 73349
             </ContactRow>
           </div>
         </div>
 
         <form
-          onSubmit={(e) => {
+          onSubmit={async (e) => {
             e.preventDefault();
-            setSent(true);
+            if (submitting) return;
+            setSubmitting(true);
+            const fd = new FormData(e.currentTarget);
+            const { submitLead } = await import("@/lib/leads.functions");
+            const res = await submitLead({
+              data: {
+                name: String(fd.get("name") ?? ""),
+                company: String(fd.get("company") ?? ""),
+                email: String(fd.get("email") ?? ""),
+              },
+            });
+            setSubmitting(false);
+            if (res.ok) setSent(true);
+            else alert("Something went wrong. Please try again or call us directly.");
           }}
           className="glass rounded-3xl p-8 md:p-10 shadow-navy space-y-5"
         >
@@ -827,24 +789,20 @@ function ContactForm() {
             <Field label="Full name" name="name" placeholder="Ridhima Shah" />
             <Field label="Company" name="company" placeholder="Luméa Skincare" />
           </div>
-          <Field label="Work email" name="email" type="email" placeholder="you@brand.com" />
-          <Field label="Monthly ad budget" name="budget" placeholder="5L – 10L" />
-          <div>
-            <label className="block text-xs font-semibold text-navy-deep mb-2 uppercase tracking-wider">
-              Tell us about your goals
-            </label>
-            <textarea
-              rows={4}
-              placeholder="We want to scale our D2C skincare brand from 40L to 2Cr / month…"
-              className="w-full rounded-2xl border border-border bg-white/70 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-orange focus:border-orange transition"
-            />
-          </div>
+          <Field label="Email" name="email" type="email" placeholder="you@brand.com" />
           <button
             type="submit"
-            className="w-full bg-navy-deep hover:bg-navy text-primary-foreground rounded-full px-6 py-4 font-semibold shadow-navy hover:shadow-glow transition-all inline-flex items-center justify-center gap-2"
+            disabled={submitting}
+            className="w-full bg-navy-deep hover:bg-navy text-primary-foreground rounded-full px-6 py-4 font-semibold shadow-navy hover:shadow-glow transition-all inline-flex items-center justify-center gap-2 disabled:opacity-70"
           >
-            {sent ? "Thanks — we'll be in touch ✨" : (<>Send message <ArrowRight className="h-4 w-4" /></>)}
+            {sent ? "Thanks — we'll be in touch ✨" : submitting ? "Sending…" : (<>Send message <ArrowRight className="h-4 w-4" /></>)}
           </button>
+          <a
+            href="tel:+919752473349"
+            className="w-full bg-orange-gradient text-white rounded-full px-6 py-4 font-semibold shadow-glow hover:opacity-95 transition-all inline-flex items-center justify-center gap-2"
+          >
+            <Phone className="h-4 w-4" /> Call now: +91 97524 73349
+          </a>
           <p className="text-xs text-muted-foreground text-center">
             By submitting, you agree to be contacted by Bedifly. We never share your info.
           </p>
