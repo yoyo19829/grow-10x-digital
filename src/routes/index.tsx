@@ -192,7 +192,105 @@ const packages: Pkg[] = [
     ],
     note: "Domain name and hosting will be provided by the client.",
   },
+  {
+    emoji: "📱",
+    name: "Social Media Management",
+    tagline: "Consistent, on-brand content that grows reach & engagement.",
+    price: 14999,
+    sections: [
+      {
+        title: "Social Media Management",
+        items: [
+          "8 High-Quality Creative Posts",
+          "8 Engaging Reels (Video Content)",
+          "Festival & Special Occasion Creatives",
+          "Monthly Content Calendar & Planning",
+          "Caption Writing with Strong CTAs",
+          "Hashtag & Posting Strategy",
+        ],
+      },
+      {
+        title: "💡 Content & Growth Strategy",
+        items: [
+          "Ad Creative Concepts & Hook Ideas",
+          "High-Converting Ad Copy & Captions",
+          "Content Strategy for Better Reach & Engagement",
+          "Competitor Analysis & Market Insights",
+          "Brand Positioning Recommendations",
+        ],
+      },
+    ],
+  },
+  {
+    emoji: "👑",
+    name: "Social Media + Lead Generation Elite",
+    tagline: "The ultimate all-in-one package — Infinity lead gen paired with full social media management.",
+    price: 34999,
+    sections: [
+      {
+        title: "Lead Generation Platform",
+        items: ["Meta Ads + Google Ads (or the best combination based on your business)"],
+      },
+      {
+        title: "Lead Collection Options",
+        items: [
+          "High-Speed Next.js Landing Page",
+          "Meta Instant Forms",
+          "Phone Calls",
+          "WhatsApp",
+          "CRM Integration",
+          "Google Sheets",
+        ],
+      },
+      {
+        title: "Premium Growth Features",
+        items: [
+          "Everything in Momentum",
+          "Custom Fast Loading Next.js Landing Page",
+          "Complete Sales Funnel Setup",
+          "Meta Pixel + Meta Conversion API (CAPI)",
+          "Google Tag Manager Setup",
+          "Google Analytics 4 Setup",
+          "Advanced Conversion Tracking",
+          "Lead Quality Optimization",
+          "Advanced Remarketing Campaigns",
+          "AI-Powered Lead Qualification (Optional)",
+          "Email & WhatsApp Follow-up Integration",
+          "Monthly Creative Refresh",
+          "Competitor Analysis",
+          "Advanced A/B Testing",
+          "Weekly Strategy Meetings",
+          "Real-Time Performance Dashboard",
+          "Monthly Growth Review",
+          "Dedicated Performance Marketing Manager",
+        ],
+      },
+      {
+        title: "Social Media Management",
+        items: [
+          "8 High-Quality Creative Posts",
+          "8 Engaging Reels (Video Content)",
+          "Festival & Special Occasion Creatives",
+          "Monthly Content Calendar & Planning",
+          "Caption Writing with Strong CTAs",
+          "Hashtag & Posting Strategy",
+        ],
+      },
+      {
+        title: "💡 Content & Growth Strategy",
+        items: [
+          "Ad Creative Concepts & Hook Ideas",
+          "High-Converting Ad Copy & Captions",
+          "Content Strategy for Better Reach & Engagement",
+          "Competitor Analysis & Market Insights",
+          "Brand Positioning Recommendations",
+        ],
+      },
+    ],
+    note: "Domain name and hosting will be provided by the client.",
+  },
 ];
+
 
 const termOffers = [
   { months: 3, off: 10 },
