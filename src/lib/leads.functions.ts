@@ -1,10 +1,19 @@
 import { createServerFn } from "@tanstack/react-start";
 
 export const submitLead = createServerFn({ method: "POST" })
-  .inputValidator((data: { name: string; company: string; email: string }) => {
-    if (!data.name || !data.email) throw new Error("Missing required fields");
-    return data;
-  })
+  .inputValidator(
+    (data: {
+      name: string;
+      company: string;
+      email: string;
+      mobile: string;
+      city: string;
+    }) => {
+      if (!data.name || !data.email || !data.mobile)
+        throw new Error("Missing required fields");
+      return data;
+    },
+  )
   .handler(async ({ data }) => {
     const webhookUrl = process.env.GOOGLE_SHEETS_WEBHOOK_URL;
     if (!webhookUrl) {
@@ -20,6 +29,8 @@ export const submitLead = createServerFn({ method: "POST" })
           name: data.name,
           company: data.company,
           email: data.email,
+          mobile: data.mobile,
+          city: data.city,
         }),
       });
       if (!res.ok) {

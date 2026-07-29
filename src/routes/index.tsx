@@ -777,6 +777,8 @@ function ContactForm() {
                 name: String(fd.get("name") ?? ""),
                 company: String(fd.get("company") ?? ""),
                 email: String(fd.get("email") ?? ""),
+                mobile: String(fd.get("mobile") ?? ""),
+                city: String(fd.get("city") ?? ""),
               },
             });
             setSubmitting(false);
@@ -786,10 +788,14 @@ function ContactForm() {
           className="glass rounded-3xl p-8 md:p-10 shadow-navy space-y-5"
         >
           <div className="grid sm:grid-cols-2 gap-4">
-            <Field label="Full name" name="name" placeholder="Ridhima Shah" />
+            <Field label="Full name" name="name" placeholder="Ridhima Shah" required />
             <Field label="Company" name="company" placeholder="Luméa Skincare" />
           </div>
-          <Field label="Email" name="email" type="email" placeholder="you@brand.com" />
+          <div className="grid sm:grid-cols-2 gap-4">
+            <Field label="Mobile number" name="mobile" type="tel" placeholder="+91 98765 43210" required />
+            <Field label="City" name="city" placeholder="Ahmedabad" />
+          </div>
+          <Field label="Email" name="email" type="email" placeholder="you@brand.com" required />
           <button
             type="submit"
             disabled={submitting}
@@ -839,11 +845,13 @@ function Field({
   name,
   type = "text",
   placeholder,
+  required,
 }: {
   label: string;
   name: string;
   type?: string;
   placeholder?: string;
+  required?: boolean;
 }) {
   return (
     <div>
@@ -851,13 +859,14 @@ function Field({
         htmlFor={name}
         className="block text-xs font-semibold text-navy-deep mb-2 uppercase tracking-wider"
       >
-        {label}
+        {label}{required && <span className="text-orange ml-1">*</span>}
       </label>
       <input
         id={name}
         name={name}
         type={type}
         placeholder={placeholder}
+        required={required}
         className="w-full rounded-2xl border border-border bg-white/70 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-orange focus:border-orange transition"
       />
     </div>
