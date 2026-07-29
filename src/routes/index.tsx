@@ -192,7 +192,105 @@ const packages: Pkg[] = [
     ],
     note: "Domain name and hosting will be provided by the client.",
   },
+  {
+    emoji: "📱",
+    name: "Social Media Management",
+    tagline: "Consistent, on-brand content that grows reach & engagement.",
+    price: 14999,
+    sections: [
+      {
+        title: "Social Media Management",
+        items: [
+          "8 High-Quality Creative Posts",
+          "8 Engaging Reels (Video Content)",
+          "Festival & Special Occasion Creatives",
+          "Monthly Content Calendar & Planning",
+          "Caption Writing with Strong CTAs",
+          "Hashtag & Posting Strategy",
+        ],
+      },
+      {
+        title: "💡 Content & Growth Strategy",
+        items: [
+          "Ad Creative Concepts & Hook Ideas",
+          "High-Converting Ad Copy & Captions",
+          "Content Strategy for Better Reach & Engagement",
+          "Competitor Analysis & Market Insights",
+          "Brand Positioning Recommendations",
+        ],
+      },
+    ],
+  },
+  {
+    emoji: "👑",
+    name: "Social Media + Lead Generation Elite",
+    tagline: "The ultimate all-in-one package — Infinity lead gen paired with full social media management.",
+    price: 34999,
+    sections: [
+      {
+        title: "Lead Generation Platform",
+        items: ["Meta Ads + Google Ads (or the best combination based on your business)"],
+      },
+      {
+        title: "Lead Collection Options",
+        items: [
+          "High-Speed Next.js Landing Page",
+          "Meta Instant Forms",
+          "Phone Calls",
+          "WhatsApp",
+          "CRM Integration",
+          "Google Sheets",
+        ],
+      },
+      {
+        title: "Premium Growth Features",
+        items: [
+          "Everything in Momentum",
+          "Custom Fast Loading Next.js Landing Page",
+          "Complete Sales Funnel Setup",
+          "Meta Pixel + Meta Conversion API (CAPI)",
+          "Google Tag Manager Setup",
+          "Google Analytics 4 Setup",
+          "Advanced Conversion Tracking",
+          "Lead Quality Optimization",
+          "Advanced Remarketing Campaigns",
+          "AI-Powered Lead Qualification (Optional)",
+          "Email & WhatsApp Follow-up Integration",
+          "Monthly Creative Refresh",
+          "Competitor Analysis",
+          "Advanced A/B Testing",
+          "Weekly Strategy Meetings",
+          "Real-Time Performance Dashboard",
+          "Monthly Growth Review",
+          "Dedicated Performance Marketing Manager",
+        ],
+      },
+      {
+        title: "Social Media Management",
+        items: [
+          "8 High-Quality Creative Posts",
+          "8 Engaging Reels (Video Content)",
+          "Festival & Special Occasion Creatives",
+          "Monthly Content Calendar & Planning",
+          "Caption Writing with Strong CTAs",
+          "Hashtag & Posting Strategy",
+        ],
+      },
+      {
+        title: "💡 Content & Growth Strategy",
+        items: [
+          "Ad Creative Concepts & Hook Ideas",
+          "High-Converting Ad Copy & Captions",
+          "Content Strategy for Better Reach & Engagement",
+          "Competitor Analysis & Market Insights",
+          "Brand Positioning Recommendations",
+        ],
+      },
+    ],
+    note: "Domain name and hosting will be provided by the client.",
+  },
 ];
+
 
 const termOffers = [
   { months: 3, off: 10 },
@@ -200,7 +298,7 @@ const termOffers = [
   { months: 12, off: 30 },
 ];
 
-const formatINR = (n: number) => `₹${n.toLocaleString("en-IN")}`;
+const formatINR = (n: number) => n.toLocaleString("en-IN");
 
 const testimonials = [
   {
@@ -223,7 +321,7 @@ const testimonials = [
   },
   {
     quote:
-      "Must try — they are very good in it whatever they do. I am in interior designing business, converting more than 5 clients per month with a project cost around ₹15 lac+.",
+      "Must try — they are very good in it whatever they do. I am in interior designing business, converting more than 5 clients per month with a project cost around 15 lac+.",
     name: "Divya Jamini",
     role: "Founder, Aristo Spaces",
   },
@@ -320,7 +418,7 @@ function Hero() {
           {[
             { target: 10, suffix: "+", label: "Years scaling brands" },
             { target: 50, suffix: "+", label: "Brands served" },
-            { target: 10, prefix: "₹", suffix: "Cr+", label: "Ad spend managed" },
+            { target: 10, prefix: "", suffix: "Cr+", label: "Ad spend managed" },
           ].map((s) => (
             <div key={s.label} className="glass rounded-2xl p-5 shadow-soft">
               <div className="text-3xl md:text-4xl font-bold text-gradient-brand">
@@ -408,7 +506,7 @@ function Services() {
           </p>
         </div>
 
-        <div className="mt-16 grid gap-6 lg:grid-cols-3 items-start">
+        <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-start">
           {packages.map((p, i) => (
             <PackageCard key={p.name} pkg={p} index={i} />
           ))}
@@ -457,6 +555,9 @@ function PackageCard({ pkg, index }: { pkg: Pkg; index: number }) {
               /month
             </span>
           </div>
+          <div className={`mt-1 text-xs ${pkg.highlight ? "text-white/70" : "text-muted-foreground"}`}>
+            ≈ {formatINR(Math.round(monthly / 30))} / day
+          </div>
           {offer && (
             <div className={`mt-1 text-xs ${pkg.highlight ? "text-white/70" : "text-muted-foreground"}`}>
               <span className="line-through mr-2">{formatINR(pkg.price)}</span>
@@ -464,6 +565,7 @@ function PackageCard({ pkg, index }: { pkg: Pkg; index: number }) {
             </div>
           )}
         </div>
+
 
         <div className="mt-5 grid grid-cols-4 gap-1.5">
           <button
@@ -726,14 +828,14 @@ function ContactForm() {
             <Field label="Company" name="company" placeholder="Luméa Skincare" />
           </div>
           <Field label="Work email" name="email" type="email" placeholder="you@brand.com" />
-          <Field label="Monthly ad budget" name="budget" placeholder="₹5L – ₹10L" />
+          <Field label="Monthly ad budget" name="budget" placeholder="5L – 10L" />
           <div>
             <label className="block text-xs font-semibold text-navy-deep mb-2 uppercase tracking-wider">
               Tell us about your goals
             </label>
             <textarea
               rows={4}
-              placeholder="We want to scale our D2C skincare brand from ₹40L to ₹2Cr / month…"
+              placeholder="We want to scale our D2C skincare brand from 40L to 2Cr / month…"
               className="w-full rounded-2xl border border-border bg-white/70 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-orange focus:border-orange transition"
             />
           </div>
