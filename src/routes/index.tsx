@@ -273,6 +273,12 @@ const testimonials = [
     name: "Divya Jamini",
     role: "Founder, Aristo Spaces",
   },
+  {
+    quote:
+      "We are into the loan industry, needing clients all over India for above ₹1 crore residential and commercial loans. Ashutosh sir has helped us a lot in getting loan files at a very affordable lead cost — conversion rate above 4% and we are getting a ROAS of around 1:9 right now.",
+    name: "Vishal Reddy",
+    role: "Founder, Akshat Financial Services",
+  },
 ];
 
 function Landing() {
