@@ -555,6 +555,9 @@ function PackageCard({ pkg, index }: { pkg: Pkg; index: number }) {
               /month
             </span>
           </div>
+          <div className={`mt-1 text-xs ${pkg.highlight ? "text-white/70" : "text-muted-foreground"}`}>
+            ≈ {formatINR(Math.round(monthly / 30))} / day
+          </div>
           {offer && (
             <div className={`mt-1 text-xs ${pkg.highlight ? "text-white/70" : "text-muted-foreground"}`}>
               <span className="line-through mr-2">{formatINR(pkg.price)}</span>
@@ -562,6 +565,7 @@ function PackageCard({ pkg, index }: { pkg: Pkg; index: number }) {
             </div>
           )}
         </div>
+
 
         <div className="mt-5 grid grid-cols-4 gap-1.5">
           <button
