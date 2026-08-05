@@ -66,8 +66,11 @@ export const Route = createFileRoute("/")({
 type Pkg = {
   emoji: string;
   name: string;
+  category: string;
   tagline: string;
   price: number;
+  priceLabel?: string;
+  oneTime?: boolean;
   highlight?: boolean;
   sections: { title: string; items: string[] }[];
   note?: string;
@@ -77,23 +80,20 @@ const packages: Pkg[] = [
   {
     emoji: "🚀",
     name: "Lead Generation Ignite",
+    category: "Lead Generation",
     tagline: "Perfect for businesses starting their lead generation journey.",
     price: 7999,
     sections: [
-      { title: "Lead Generation Platform", items: ["Meta Ads (Facebook & Instagram)"] },
-      {
-        title: "Lead Collection Options",
-        items: ["Meta Instant Forms", "Phone Calls", "WhatsApp", "Google Sheets Integration"],
-      },
       {
         title: "What's Included",
         items: [
+          "Meta Ads (Facebook & Instagram)",
+          "Meta Instant Forms, Calls, WhatsApp & Google Sheets leads",
           "Complete Campaign Setup",
           "Audience Research & Targeting",
           "Professional Ad Copywriting",
           "High-Converting Ad Creatives (Static & Video)",
-          "Meta Pixel Setup",
-          "Meta Conversion API (CAPI) Integration",
+          "Meta Pixel + Conversion API (CAPI)",
           "Conversion Tracking",
           "Campaign Monitoring & Optimization",
           "Weekly Performance Reports",
@@ -106,30 +106,17 @@ const packages: Pkg[] = [
   {
     emoji: "📈",
     name: "Lead Generation Momentum",
+    category: "Lead Generation",
     tagline: "Built for businesses ready to scale consistently.",
     price: 14999,
     highlight: true,
     sections: [
       {
-        title: "Lead Generation Platform",
-        items: ["Meta Ads or Google Ads (Platform selected based on your business objectives)"],
-      },
-      {
-        title: "Lead Collection Options",
-        items: [
-          "High-Speed Next.js Landing Page",
-          "Meta Instant Forms",
-          "Phone Calls",
-          "WhatsApp",
-          "Google Sheets Integration",
-        ],
-      },
-      {
         title: "What's Included",
         items: [
-          "Everything in Ignite",
+          "Everything included in Ignite package",
+          "Meta Ads or Google Ads (chosen for your objectives)",
           "Fast Loading Next.js Landing Page",
-          "Meta Pixel + Meta Conversion API (CAPI)",
           "Google Conversion Tracking",
           "Landing Page Optimization",
           "A/B Testing",
@@ -148,33 +135,18 @@ const packages: Pkg[] = [
   {
     emoji: "♾️",
     name: "Lead Generation Infinity",
-    tagline: "The complete performance marketing solution for businesses focused on aggressive growth.",
+    category: "Lead Generation",
+    tagline: "The complete solution for businesses focused on aggressive growth.",
     price: 24999,
     sections: [
       {
-        title: "Lead Generation Platform",
-        items: ["Meta Ads + Google Ads (or the best combination based on your business)"],
-      },
-      {
-        title: "Lead Collection Options",
+        title: "What's Included",
         items: [
-          "High-Speed Next.js Landing Page",
-          "Meta Instant Forms",
-          "Phone Calls",
-          "WhatsApp",
-          "CRM Integration",
-          "Google Sheets",
-        ],
-      },
-      {
-        title: "Premium Growth Features",
-        items: [
-          "Everything in Momentum",
+          "Everything included in Momentum package",
+          "Meta Ads + Google Ads combined",
           "Custom Fast Loading Next.js Landing Page",
           "Complete Sales Funnel Setup",
-          "Meta Pixel + Meta Conversion API (CAPI)",
-          "Google Tag Manager Setup",
-          "Google Analytics 4 Setup",
+          "Google Tag Manager + Analytics 4 Setup",
           "Advanced Conversion Tracking",
           "Lead Quality Optimization",
           "Advanced Remarketing Campaigns",
@@ -185,7 +157,6 @@ const packages: Pkg[] = [
           "Advanced A/B Testing",
           "Weekly Strategy Meetings",
           "Real-Time Performance Dashboard",
-          "Monthly Growth Review",
           "Dedicated Performance Marketing Manager",
         ],
       },
@@ -195,11 +166,12 @@ const packages: Pkg[] = [
   {
     emoji: "📱",
     name: "Social Media Management",
+    category: "Social Media",
     tagline: "Consistent, on-brand content that grows reach & engagement.",
     price: 14999,
     sections: [
       {
-        title: "Social Media Management",
+        title: "What's Included",
         items: [
           "8 High-Quality Creative Posts",
           "8 Engaging Reels (Video Content)",
@@ -207,11 +179,6 @@ const packages: Pkg[] = [
           "Monthly Content Calendar & Planning",
           "Caption Writing with Strong CTAs",
           "Hashtag & Posting Strategy",
-        ],
-      },
-      {
-        title: "💡 Content & Growth Strategy",
-        items: [
           "Ad Creative Concepts & Hook Ideas",
           "High-Converting Ad Copy & Captions",
           "Content Strategy for Better Reach & Engagement",
@@ -224,7 +191,8 @@ const packages: Pkg[] = [
   {
     emoji: "👑",
     name: "Social Media + Lead Generation Elite",
-    tagline: "The ultimate all-in-one package — Momentum lead gen paired with full social media management.",
+    category: "Social Media",
+    tagline: "The ultimate all-in-one growth package.",
     price: 27999,
     sections: [
       {
@@ -236,6 +204,72 @@ const packages: Pkg[] = [
       },
     ],
     note: "Domain name and hosting will be provided by the client.",
+  },
+  {
+    emoji: "🌐",
+    name: "Website Starter",
+    category: "Website Development",
+    tagline: "A clean, fast website to get your business online.",
+    price: 24999,
+    oneTime: true,
+    sections: [
+      {
+        title: "What's Included",
+        items: [
+          "5-page responsive website",
+          "Free domain & 1-year hosting",
+          "SSL certificate",
+          "Contact form",
+          "Basic SEO",
+          "WhatsApp integration",
+        ],
+      },
+    ],
+  },
+  {
+    emoji: "💼",
+    name: "Website Business",
+    category: "Website Development",
+    tagline: "A custom-designed site built to capture leads.",
+    price: 39999,
+    oneTime: true,
+    sections: [
+      {
+        title: "What's Included",
+        items: [
+          "Everything included in Starter package",
+          "Custom design",
+          "Blog",
+          "Google Analytics",
+          "Meta Pixel",
+          "Lead forms",
+          "Speed optimization",
+        ],
+      },
+    ],
+  },
+  {
+    emoji: "🏆",
+    name: "Website Premium",
+    category: "Website Development",
+    tagline: "A conversion machine with automation and support built in.",
+    price: 59999,
+    priceLabel: "59,999 – 79,999",
+    oneTime: true,
+    sections: [
+      {
+        title: "What's Included",
+        items: [
+          "Everything included in Business package",
+          "Booking system or advanced forms",
+          "CRM integration",
+          "Conversion-focused landing pages",
+          "Advanced SEO setup",
+          "AI chatbot",
+          "3 months of support",
+        ],
+      },
+    ],
   },
 ];
 
@@ -460,7 +494,7 @@ function Services() {
           </p>
         </div>
 
-        <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-start">
+        <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-stretch">
           {packages.map((p, i) => (
             <PackageCard key={p.name} pkg={p} index={i} />
           ))}
@@ -472,12 +506,12 @@ function Services() {
 
 function PackageCard({ pkg, index }: { pkg: Pkg; index: number }) {
   const [term, setTerm] = useState(0); // index into termOffers, 0 = base (no discount)
-  const offer = term === 0 ? null : termOffers[term - 1];
+  const offer = pkg.oneTime || term === 0 ? null : termOffers[term - 1];
   const monthly = offer ? Math.round(pkg.price * (1 - offer.off / 100)) : pkg.price;
 
   return (
     <div
-      className={`group relative rounded-3xl border p-8 shadow-soft hover:shadow-navy hover:-translate-y-1 transition-all overflow-hidden flex flex-col ${
+      className={`group relative h-full rounded-3xl border p-8 shadow-soft hover:shadow-navy hover:-translate-y-1 transition-all overflow-hidden flex flex-col ${
         pkg.highlight
           ? "bg-navy-deep text-primary-foreground border-navy-deep"
           : "bg-card border-border"
@@ -491,66 +525,76 @@ function PackageCard({ pkg, index }: { pkg: Pkg; index: number }) {
       )}
       <div className="absolute -top-16 -right-16 h-40 w-40 rounded-full bg-orange/10 blur-2xl group-hover:bg-orange/25 transition" />
 
-      <div className="relative">
-        <div className="text-3xl">{pkg.emoji}</div>
+      <div className="relative flex flex-1 flex-col">
+        <div className={`text-[10px] font-bold uppercase tracking-widest ${pkg.highlight ? "text-white/50" : "text-muted-foreground"}`}>
+          {pkg.category}
+        </div>
+        <div className="mt-2 text-3xl">{pkg.emoji}</div>
         <h3 className={`mt-3 text-2xl font-bold ${pkg.highlight ? "text-white" : "text-navy-deep"}`}>
           {pkg.name}
         </h3>
-        <p className={`mt-2 text-sm leading-relaxed ${pkg.highlight ? "text-white/70" : "text-muted-foreground"}`}>
+        <p className={`mt-2 min-h-[2.75rem] text-sm leading-relaxed ${pkg.highlight ? "text-white/70" : "text-muted-foreground"}`}>
           {pkg.tagline}
         </p>
 
         <div className="mt-6">
-          <div className="flex items-baseline gap-2">
-            <span className={`text-4xl font-bold ${pkg.highlight ? "text-orange" : "text-navy-deep"}`}>
-              {formatINR(monthly)}
+          <div className="flex flex-wrap items-baseline gap-x-2">
+            <span className={`text-3xl md:text-4xl font-bold ${pkg.highlight ? "text-orange" : "text-navy-deep"}`}>
+              {pkg.priceLabel ?? formatINR(monthly)}
             </span>
             <span className={`text-sm ${pkg.highlight ? "text-white/60" : "text-muted-foreground"}`}>
-              /month
+              {pkg.oneTime ? "one-time" : "/month"}
             </span>
           </div>
-          <div className={`mt-1 text-xs ${pkg.highlight ? "text-white/70" : "text-muted-foreground"}`}>
-            ≈ {formatINR(Math.round(monthly / 30))} / day
+          <div className={`mt-1 min-h-[1rem] text-xs ${pkg.highlight ? "text-white/70" : "text-muted-foreground"}`}>
+            {pkg.oneTime
+              ? "Project-based · delivered end to end"
+              : `≈ ${formatINR(Math.round(monthly / 30))} / day`}
           </div>
-          {offer && (
-            <div className={`mt-1 text-xs ${pkg.highlight ? "text-white/70" : "text-muted-foreground"}`}>
-              <span className="line-through mr-2">{formatINR(pkg.price)}</span>
-              <span className="text-orange font-semibold">{offer.off}% OFF · {offer.months} months</span>
-            </div>
-          )}
+          <div className={`mt-1 min-h-[1rem] text-xs ${pkg.highlight ? "text-white/70" : "text-muted-foreground"}`}>
+            {offer && (
+              <>
+                <span className="line-through mr-2">{formatINR(pkg.price)}</span>
+                <span className="text-orange font-semibold">{offer.off}% OFF · {offer.months} months</span>
+              </>
+            )}
+          </div>
         </div>
 
-
-        <div className="mt-5 grid grid-cols-4 gap-1.5">
-          <button
-            type="button"
-            onClick={() => setTerm(0)}
-            className={`text-[11px] font-semibold rounded-full py-2 transition ${
-              term === 0
-                ? "bg-orange-gradient text-white shadow-glow"
-                : pkg.highlight
-                  ? "bg-white/10 text-white/80 hover:bg-white/20"
-                  : "bg-secondary text-navy-deep hover:bg-secondary/80"
-            }`}
-          >
-            1 mo
-          </button>
-          {termOffers.map((o, idx) => (
-            <button
-              type="button"
-              key={o.months}
-              onClick={() => setTerm(idx + 1)}
-              className={`text-[11px] font-semibold rounded-full py-2 transition ${
-                term === idx + 1
-                  ? "bg-orange-gradient text-white shadow-glow"
-                  : pkg.highlight
-                    ? "bg-white/10 text-white/80 hover:bg-white/20"
-                    : "bg-secondary text-navy-deep hover:bg-secondary/80"
-              }`}
-            >
-              {o.months}mo · {o.off}%
-            </button>
-          ))}
+        <div className="mt-5 min-h-[2.25rem]">
+          {!pkg.oneTime && (
+            <div className="grid grid-cols-4 gap-1.5">
+              <button
+                type="button"
+                onClick={() => setTerm(0)}
+                className={`text-[11px] font-semibold rounded-full py-2 transition ${
+                  term === 0
+                    ? "bg-orange-gradient text-white shadow-glow"
+                    : pkg.highlight
+                      ? "bg-white/10 text-white/80 hover:bg-white/20"
+                      : "bg-secondary text-navy-deep hover:bg-secondary/80"
+                }`}
+              >
+                1 mo
+              </button>
+              {termOffers.map((o, idx) => (
+                <button
+                  type="button"
+                  key={o.months}
+                  onClick={() => setTerm(idx + 1)}
+                  className={`text-[11px] font-semibold rounded-full py-2 transition ${
+                    term === idx + 1
+                      ? "bg-orange-gradient text-white shadow-glow"
+                      : pkg.highlight
+                        ? "bg-white/10 text-white/80 hover:bg-white/20"
+                        : "bg-secondary text-navy-deep hover:bg-secondary/80"
+                  }`}
+                >
+                  {o.months}mo · {o.off}%
+                </button>
+              ))}
+            </div>
+          )}
         </div>
 
         <a
@@ -564,10 +608,10 @@ function PackageCard({ pkg, index }: { pkg: Pkg; index: number }) {
           Get Started <ArrowRight className="h-4 w-4" />
         </a>
 
-        <div className="mt-8 space-y-6">
+        <div className="mt-8 flex-1 space-y-6">
           {pkg.sections.map((sec) => (
             <div key={sec.title}>
-              <div className={`text-xs font-bold uppercase tracking-widest mb-3 ${pkg.highlight ? "text-orange" : "text-orange"}`}>
+              <div className="text-xs font-bold uppercase tracking-widest mb-3 text-orange">
                 {sec.title}
               </div>
               <ul className="space-y-2">
