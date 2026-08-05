@@ -494,7 +494,7 @@ function Services() {
           </p>
         </div>
 
-        <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-start">
+        <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-stretch">
           {packages.map((p, i) => (
             <PackageCard key={p.name} pkg={p} index={i} />
           ))}
