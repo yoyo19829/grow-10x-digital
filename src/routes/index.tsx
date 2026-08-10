@@ -821,19 +821,20 @@ function ContactForm() {
             if (submitting) return;
             setSubmitting(true);
             const fd = new FormData(e.currentTarget);
-            const { submitLead } = await import("@/lib/leads.functions");
+            const { submitLead } = await import("@/lib/leads-webhook");
             const res = await submitLead({
-              data: {
-                name: String(fd.get("name") ?? ""),
-                company: String(fd.get("company") ?? ""),
-                email: String(fd.get("email") ?? ""),
-                mobile: String(fd.get("mobile") ?? ""),
-                city: String(fd.get("city") ?? ""),
-              },
+              name: String(fd.get("name") ?? ""),
+              company: String(fd.get("company") ?? ""),
+              email: String(fd.get("email") ?? ""),
+              mobile: String(fd.get("mobile") ?? ""),
+              city: String(fd.get("city") ?? ""),
             });
             setSubmitting(false);
-            if (res.ok) setSent(true);
-            else alert("Something went wrong. Please try again or call us directly.");
+            if (res.ok) {
+              setSent(true);
+            } else {
+              alert(res.error ?? "Something went wrong. Please try again or call us directly.");
+            }
           }}
           className="glass rounded-3xl p-8 md:p-10 shadow-navy space-y-5"
         >

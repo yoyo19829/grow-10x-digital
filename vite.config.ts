@@ -7,10 +7,20 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
+  // Disable the Nitro server bundle so the build emits a static, prerendered
+  // client bundle suitable for Apache/PHP shared hosting (e.g. Hostinger).
+  nitro: false,
   tanstackStart: {
-    // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
-    // nitro/vite builds from this
-    server: { entry: "server" },
+    // Prerender the home page so the build emits a static index.html.
+    pages: [
+      {
+        path: "/",
+        prerender: {
+          enabled: true,
+          autoSubfolderIndex: true,
+        },
+      },
+    ],
   },
   vite: {
     server: {
