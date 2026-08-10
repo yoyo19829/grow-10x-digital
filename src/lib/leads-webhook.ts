@@ -8,20 +8,20 @@ export async function submitLead(data: {
   city: string;
 }) {
   if (!WEBHOOK_URL) {
-    console.error("VITE_GOOGLE_SHEETS_WEBHOOK_URL is not configured");
+    console.warn("VITE_GOOGLE_SHEETS_WEBHOOK_URL is not set.");
     return {
       ok: false,
       error:
-        "Google Sheets webhook URL is not configured. Set VITE_GOOGLE_SHEETS_WEBHOOK_URL before building.",
+        "Google Sheets Webhook URL is not configured. Please set VITE_GOOGLE_SHEETS_WEBHOOK_URL with your Google Apps Script URL.",
     };
   }
 
   try {
-    const res = await fetch(WEBHOOK_URL, {
+    await fetch(WEBHOOK_URL, {
       method: "POST",
       headers: { "content-type": "text/plain;charset=utf-8" },
       body: JSON.stringify({
-        timestamp: new Date().toISOString(),
+        timestamp: new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" }),
         name: data.name,
         company: data.company,
         email: data.email,
@@ -31,15 +31,9 @@ export async function submitLead(data: {
       redirect: "follow",
     });
 
-    if (!res.ok) {
-      const body = await res.text();
-      console.error(`Sheets webhook failed [${res.status}]: ${body}`);
-      return { ok: false, error: "Failed to save. Please try again or call us directly." };
-    }
-
     return { ok: true };
   } catch (err) {
-    console.error(err);
+    console.error("Lead submission error:", err);
     return { ok: false, error: "Network error. Please try again or call us directly." };
   }
 }

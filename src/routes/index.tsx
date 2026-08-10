@@ -1,13 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
+import { toast } from "sonner";
 import {
   ArrowRight,
   Sparkles,
   TrendingUp,
-  Target,
-  Megaphone,
-  Search,
-  ShoppingBag,
   Mail,
   MapPin,
   Phone,
@@ -61,7 +58,6 @@ export const Route = createFileRoute("/")({
   }),
   component: Landing,
 });
-
 
 type Pkg = {
   emoji: string;
@@ -273,7 +269,6 @@ const packages: Pkg[] = [
   },
 ];
 
-
 const termOffers = [
   { months: 3, off: 10 },
   { months: 6, off: 20 },
@@ -330,7 +325,6 @@ function Landing() {
   );
 }
 
-
 function Nav() {
   return (
     <header className="fixed top-4 inset-x-0 z-50 flex justify-center px-4">
@@ -359,7 +353,6 @@ function Nav() {
 function Hero() {
   return (
     <section className="bg-hero relative pt-40 pb-28 px-6 overflow-hidden">
-      {/* floating 3d blobs */}
       <div className="pointer-events-none absolute -top-24 -left-24 h-96 w-96 rounded-full bg-orange/30 blur-3xl animate-glow-pulse" />
       <div className="pointer-events-none absolute top-1/3 -right-24 h-[28rem] w-[28rem] rounded-full bg-navy/25 blur-3xl animate-glow-pulse" style={{ animationDelay: "1.5s" }} />
 
@@ -401,7 +394,6 @@ function Hero() {
           </a>
         </div>
 
-        {/* stats */}
         <div className="mt-16 grid grid-cols-3 gap-4 max-w-3xl mx-auto">
           {[
             { target: 10, suffix: "+", label: "Years scaling brands" },
@@ -416,7 +408,6 @@ function Hero() {
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );
@@ -471,7 +462,6 @@ function Counter({
   );
 }
 
-
 function Services() {
   return (
     <section id="services" className="relative py-28 px-6">
@@ -505,7 +495,7 @@ function Services() {
 }
 
 function PackageCard({ pkg, index }: { pkg: Pkg; index: number }) {
-  const [term, setTerm] = useState(0); // index into termOffers, 0 = base (no discount)
+  const [term, setTerm] = useState(0);
   const offer = pkg.oneTime || term === 0 ? null : termOffers[term - 1];
   const monthly = offer ? Math.round(pkg.price * (1 - offer.off / 100)) : pkg.price;
 
@@ -709,7 +699,7 @@ function Brands() {
           Brands we're scaling <span className="text-gradient-brand">right now.</span>
         </h2>
         <p className="mt-4 text-muted-foreground max-w-xl mx-auto">
-From New Companies to Big brands.
+          From New Companies to Big brands.
         </p>
 
         <div className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -784,6 +774,7 @@ function Testimonials() {
 function ContactForm() {
   const [sent, setSent] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+
   return (
     <section id="contact" className="relative py-28 px-6">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-14 items-start">
@@ -820,7 +811,8 @@ function ContactForm() {
             e.preventDefault();
             if (submitting) return;
             setSubmitting(true);
-            const fd = new FormData(e.currentTarget);
+            const form = e.currentTarget;
+            const fd = new FormData(form);
             const { submitLead } = await import("@/lib/leads-webhook");
             const res = await submitLead({
               name: String(fd.get("name") ?? ""),
@@ -832,8 +824,10 @@ function ContactForm() {
             setSubmitting(false);
             if (res.ok) {
               setSent(true);
+              toast.success("Thank you! Your details have been submitted.");
+              form.reset();
             } else {
-              alert(res.error ?? "Something went wrong. Please try again or call us directly.");
+              toast.error(res.error ?? "Something went wrong. Please try again or call us directly.");
             }
           }}
           className="glass rounded-3xl p-8 md:p-10 shadow-navy space-y-5"
