@@ -821,7 +821,7 @@ function ContactForm() {
             if (submitting) return;
             setSubmitting(true);
             const fd = new FormData(e.currentTarget);
-            const { submitLead } = await import("@/lib/leads.client");
+            const { submitLead } = await import("@/lib/leads-webhook");
             const res = await submitLead({
               name: String(fd.get("name") ?? ""),
               company: String(fd.get("company") ?? ""),
