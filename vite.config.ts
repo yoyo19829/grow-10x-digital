@@ -7,9 +7,9 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
-  // For Hostinger/Apache static hosting, run: STATIC_BUILD=true npm run build
-  // This disables the Nitro server bundle and emits a prerendered index.html.
-  nitro: process.env["STATIC_BUILD"] === "true" ? false : undefined,
+  // Disable the Nitro server bundle so the build emits a static, prerendered
+  // client bundle suitable for Apache/PHP shared hosting (e.g. Hostinger).
+  nitro: false,
   tanstackStart: {
     // Prerender the home page so the build emits a static index.html.
     pages: [
