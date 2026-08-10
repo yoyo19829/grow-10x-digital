@@ -7,8 +7,10 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
+  // Skip nitro so the build emits a static client bundle for Apache/PHP hosting.
+  nitro: false,
   tanstackStart: {
-    // Prerender the home page so the build emits a static index.html for Apache/PHP hosting.
+    // Prerender the home page so the build emits a static index.html.
     pages: [
       {
         path: "/",
