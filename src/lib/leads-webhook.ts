@@ -1,4 +1,9 @@
-const WEBHOOK_URL = import.meta.env["VITE_GOOGLE_SHEETS_WEBHOOK_URL"] as string | undefined;
+const DEFAULT_WEBHOOK_URL =
+  "https://script.google.com/macros/s/AKfycbyLEVhNXGo6gyjrUKD0IEFAkr2Ym15SHTdW_UID4BMlYqZh-A-chPNADREQS-L9HZyP/exec";
+
+const WEBHOOK_URL =
+  (import.meta.env["VITE_GOOGLE_SHEETS_WEBHOOK_URL"] as string | undefined) ||
+  DEFAULT_WEBHOOK_URL;
 
 export async function submitLead(data: {
   name: string;
@@ -7,15 +12,6 @@ export async function submitLead(data: {
   mobile: string;
   city: string;
 }) {
-  if (!WEBHOOK_URL) {
-    console.warn("VITE_GOOGLE_SHEETS_WEBHOOK_URL is not set.");
-    return {
-      ok: false,
-      error:
-        "Google Sheets Webhook URL is not configured. Please set VITE_GOOGLE_SHEETS_WEBHOOK_URL with your Google Apps Script URL.",
-    };
-  }
-
   try {
     await fetch(WEBHOOK_URL, {
       method: "POST",
