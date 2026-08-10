@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite dev",
-    "build": "vite build",
-    "build:static": "STATIC_BUILD=true vite build && node scripts/build-static.js",
+    "build": "vite build && node scripts/build-static.js",
+    "build:static": "npm run build",
     "build:dev": "vite build --mode development",
     "preview": "vite preview",
     "lint": "eslint .",
