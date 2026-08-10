@@ -12,7 +12,6 @@ import {
   Check,
   Rocket,
 } from "lucide-react";
-import logo from "@/assets/bedifly-logo.png";
 import indianPropertyExpert from "@/assets/indian-property-expert.jpeg";
 import newLifeTherapy from "@/assets/new-life-therapy.png";
 import padmakshiJewels from "@/assets/padmakshi-jewels.png";
@@ -58,6 +57,28 @@ export const Route = createFileRoute("/")({
   }),
   component: Landing,
 });
+
+function BrandLogo({ light = false }: { light?: boolean }) {
+  return (
+    <a href="#" className="group flex items-center gap-1.5 pl-1 py-1 select-none">
+      <span className="relative flex h-3 w-3 items-center justify-center">
+        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-orange opacity-75" />
+        <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-orange" />
+      </span>
+      <span className="font-display text-2xl font-black tracking-tight flex items-center">
+        <span className={light ? "text-white" : "text-navy-deep group-hover:text-orange transition-colors duration-300"}>
+          Bedi
+        </span>
+        <span className="text-gradient-orange group-hover:scale-105 transition-transform duration-300 inline-block">
+          fly
+        </span>
+        <span className="text-orange text-2xl font-black inline-block animate-bounce" style={{ animationDuration: "2s" }}>
+          .
+        </span>
+      </span>
+    </a>
+  );
+}
 
 type Pkg = {
   emoji: string;
@@ -328,10 +349,8 @@ function Landing() {
 function Nav() {
   return (
     <header className="fixed top-4 inset-x-0 z-50 flex justify-center px-4">
-      <nav className="glass w-full max-w-6xl rounded-full px-4 py-2.5 flex items-center justify-between shadow-soft">
-        <a href="#" className="flex items-center gap-2 pl-2">
-          <img src={logo} alt="Bedifly" className="h-9 w-auto" />
-        </a>
+      <nav className="glass w-full max-w-6xl rounded-full px-5 py-2.5 flex items-center justify-between shadow-soft">
+        <BrandLogo />
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-foreground/80">
           <a href="#services" className="hover:text-orange transition">Services</a>
           <a href="#about" className="hover:text-orange transition">About</a>
@@ -924,9 +943,7 @@ function Footer() {
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-4 gap-10">
           <div className="md:col-span-2">
-            <div className="flex items-center gap-3">
-              <img src={logo} alt="Bedifly" className="h-11 w-auto bg-white rounded-xl p-1.5" />
-            </div>
+            <BrandLogo light />
             <p className="mt-5 max-w-sm text-white/60 text-sm leading-relaxed">
               Bedifly is a performance marketing agency helping ambitious founders grow 10x
               with paid ads, creative and SEO that compounds.
