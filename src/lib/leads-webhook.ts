@@ -19,7 +19,7 @@ export async function submitLead(data: {
   try {
     const res = await fetch(WEBHOOK_URL, {
       method: "POST",
-      headers: { "content-type": "application/json" },
+      headers: { "content-type": "text/plain;charset=utf-8" },
       body: JSON.stringify({
         timestamp: new Date().toISOString(),
         name: data.name,
@@ -28,6 +28,7 @@ export async function submitLead(data: {
         mobile: data.mobile,
         city: data.city,
       }),
+      redirect: "follow",
     });
 
     if (!res.ok) {
