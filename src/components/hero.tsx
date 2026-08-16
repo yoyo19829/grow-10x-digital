@@ -19,7 +19,9 @@ export function Hero() {
           <span className="text-navy-deep"> in your business</span>
           <br />
           <span className="text-navy-deep">with </span>
-          <span className="text-gradient-brand">performance marketing</span>
+          <span className="text-gradient-brand">Marketing Technology</span>
+          <span className="text-navy-deep"> and </span>
+          <span className="text-gradient-brand">Ai Automation</span>
           <span className="text-orange">.</span>
         </h1>
 
