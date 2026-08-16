@@ -1,11 +1,7 @@
-import { useState } from "react";
 import { ArrowRight, Check } from "lucide-react";
-import { Pkg, termOffers, formatINR } from "@/data/landing-data";
+import { Pkg } from "@/data/landing-data";
 
 export function PackageCard({ pkg, index }: { pkg: Pkg; index: number }) {
-  const [term, setTerm] = useState(0);
-  const offer = pkg.oneTime || term === 0 ? null : termOffers[term - 1];
-  const monthly = offer ? Math.round(pkg.price * (1 - offer.off / 100)) : pkg.price;
 
   return (
     <div
