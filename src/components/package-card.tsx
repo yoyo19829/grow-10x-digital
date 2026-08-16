@@ -31,65 +31,7 @@ export function PackageCard({ pkg, index }: { pkg: Pkg; index: number }) {
           {pkg.tagline}
         </p>
 
-        <div className="mt-6">
-          <div className="flex flex-wrap items-baseline gap-x-2">
-            <span className={`text-3xl md:text-4xl font-bold ${pkg.highlight ? "text-orange" : "text-navy-deep"}`}>
-              {pkg.priceLabel ?? formatINR(monthly)}
-            </span>
-            <span className={`text-sm ${pkg.highlight ? "text-white/60" : "text-muted-foreground"}`}>
-              {pkg.oneTime ? "one-time" : "/month"}
-            </span>
-          </div>
-          <div className={`mt-1 min-h-[1rem] text-xs ${pkg.highlight ? "text-white/70" : "text-muted-foreground"}`}>
-            {pkg.oneTime
-              ? "Project-based · delivered end to end"
-              : `≈ ${formatINR(Math.round(monthly / 30))} / day`}
-          </div>
-          <div className={`mt-1 min-h-[1rem] text-xs ${pkg.highlight ? "text-white/70" : "text-muted-foreground"}`}>
-            {offer && (
-              <>
-                <span className="line-through mr-2">{formatINR(pkg.price)}</span>
-                <span className="text-orange font-semibold">{offer.off}% OFF · {offer.months} months</span>
-              </>
-            )}
-          </div>
-        </div>
-
-        <div className="mt-5 min-h-[2.25rem]">
-          {!pkg.oneTime && (
-            <div className="grid grid-cols-4 gap-1.5">
-              <button
-                type="button"
-                onClick={() => setTerm(0)}
-                className={`text-[11px] font-semibold rounded-full py-2 transition ${
-                  term === 0
-                    ? "bg-orange-gradient text-white shadow-glow"
-                    : pkg.highlight
-                      ? "bg-white/10 text-white/80 hover:bg-white/20"
-                      : "bg-secondary text-navy-deep hover:bg-secondary/80"
-                }`}
-              >
-                1 mo
-              </button>
-              {termOffers.map((o, idx) => (
-                <button
-                  type="button"
-                  key={o.months}
-                  onClick={() => setTerm(idx + 1)}
-                  className={`text-[11px] font-semibold rounded-full py-2 transition ${
-                    term === idx + 1
-                      ? "bg-orange-gradient text-white shadow-glow"
-                      : pkg.highlight
-                        ? "bg-white/10 text-white/80 hover:bg-white/20"
-                        : "bg-secondary text-navy-deep hover:bg-secondary/80"
-                  }`}
-                >
-                  {o.months}mo · {o.off}%
-                </button>
-              ))}
-            </div>
-          )}
-        </div>
+        <div className="mt-6 min-h-[1rem]" />
 
         <a
           href="#contact"
