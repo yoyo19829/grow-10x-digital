@@ -93,15 +93,15 @@ export function Services() {
   return (
     <section id="services" className="relative py-28 px-6">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center max-w-2xl mx-auto">
+        <div className="text-center max-w-4xl mx-auto">
           <div className="text-xs uppercase tracking-[0.2em] text-orange font-bold mb-4">
             What We Do
           </div>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-navy-deep leading-[1.1]">
-            Everything you need to <span className="text-gradient-orange">grow 10x.</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-extrabold text-navy-deep leading-tight whitespace-normal md:whitespace-nowrap">
+            Everything You Need to <span className="text-gradient-orange">Grow 10X.</span>
           </h2>
-          <p className="mt-6 text-muted-foreground text-base md:text-lg">
-            Six core services that work together to drive measurable growth for your business.
+          <p className="mt-6 text-muted-foreground text-base md:text-lg leading-relaxed max-w-3xl mx-auto">
+            6 core growth services working together across 3 key areas — Marketing, Technology & AI — to help you attract more customers, generate qualified leads, improve conversions, automate operations, and scale with measurable results.
           </p>
         </div>
 
