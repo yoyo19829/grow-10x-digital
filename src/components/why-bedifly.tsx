@@ -31,11 +31,11 @@ export function WhyBedifly() {
 
       <div className="relative max-w-6xl mx-auto grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
         {/* Left: heading + intro + CTA */}
-        <div>
-          <div className="text-xs uppercase tracking-[0.2em] text-orange font-semibold mb-4">
+        <div className="text-center lg:text-left">
+          <div className="text-xs uppercase tracking-[0.2em] text-orange font-bold mb-4">
             Why Bedifly
           </div>
-          <h2 className="text-3xl md:text-5xl font-bold leading-[1.1] tracking-tight">
+          <h2 className="text-3xl md:text-5xl font-extrabold leading-[1.1] tracking-tight">
             Your Business Needs More Than Just Marketing
           </h2>
           <p className="mt-6 text-base md:text-lg text-primary-foreground/70 max-w-md">

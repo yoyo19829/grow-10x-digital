@@ -28,11 +28,11 @@ export function About() {
           </div>
         </div>
 
-        <div>
-          <div className="text-xs uppercase tracking-[0.2em] text-orange font-semibold mb-4">
+        <div className="text-center md:text-left">
+          <div className="text-xs uppercase tracking-[0.2em] text-orange font-bold mb-4">
             About Bedifly
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-navy-deep leading-[1.1]">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-navy-deep leading-[1.1]">
             We don't do <span className="line-through text-muted-foreground">vanity metrics</span>. <br />
             We do <span className="text-gradient-orange">revenue.</span>
           </h2>

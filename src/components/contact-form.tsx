@@ -9,11 +9,11 @@ export function ContactForm() {
   return (
     <section id="contact" className="relative py-28 px-6">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-14 items-start">
-        <div>
-          <div className="text-xs uppercase tracking-[0.2em] text-orange font-semibold mb-4">
+        <div className="text-center md:text-left">
+          <div className="text-xs uppercase tracking-[0.2em] text-orange font-bold mb-4">
             Let's talk
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-navy-deep leading-tight">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-navy-deep leading-tight">
             Ready to <span className="text-gradient-orange">grow 10x?</span>
           </h2>
           <p className="mt-5 text-muted-foreground text-lg">
