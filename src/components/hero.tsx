@@ -20,9 +20,10 @@ export function Hero() {
         </h1>
 
         <p className="mt-8 max-w-2xl mx-auto text-lg text-muted-foreground">
-          We're Bedifly—a performance marketing agency that turns ad spend into
-          profitable growth, achieving an average ROAS of 7x for service businesses
-          and 20x for real estate.
+          We're Bedifly—a ROI-driven growth company helping businesses scale with
+          performance marketing, technology, and AI. With 10+ years of combined
+          experience, 100+ businesses served, and 7X+ average ROAS, we focus on
+          generating measurable leads, sales, and profitable growth.
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
