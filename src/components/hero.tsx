@@ -14,14 +14,8 @@ export function Hero() {
         </div>
 
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.02] tracking-tight">
-          <span className="text-navy-deep">Grow </span>
-          <span className="text-gradient-orange">10x</span>
-          <span className="text-navy-deep"> in your business</span>
-          <br />
-          <span className="text-navy-deep">with </span>
-          <span className="text-gradient-brand">Marketing Technology</span>
-          <span className="text-navy-deep"> and </span>
-          <span className="text-gradient-brand">Ai Automation</span>
+          <span className="text-gradient-brand">Grow 10X</span>
+          <span className="text-navy-deep"> with Marketing, Technology & AI</span>
           <span className="text-orange">.</span>
         </h1>
 
