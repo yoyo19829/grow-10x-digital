@@ -6,10 +6,10 @@ export function Testimonials() {
     <section id="reviews" className="relative py-28 px-6 bg-hero">
       <div className="max-w-6xl mx-auto">
         <div className="text-center max-w-2xl mx-auto">
-          <div className="text-xs uppercase tracking-[0.2em] text-orange font-semibold mb-4">
+          <div className="text-xs uppercase tracking-[0.2em] text-orange font-bold mb-4">
             What founders say
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-navy-deep">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-navy-deep">
             Real results. <span className="text-gradient-orange">Real founders.</span>
           </h2>
         </div>
