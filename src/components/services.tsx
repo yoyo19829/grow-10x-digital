@@ -31,40 +31,6 @@ const services: Service[] = [
     ],
   },
   {
-    <dyad-write path="src/components/services.tsx" description="Complete and clean version of Services component without numbers on the cards">
-import { ArrowRight } from "lucide-react";
-
-type Service = {
-  title: string;
-  description: string;
-  tags: string[];
-};
-
-const services: Service[] = [
-  {
-    title: "Performance Marketing",
-    description:
-      "Build campaigns around measurable growth, not vanity metrics. From strategy and audience research to optimization and reporting, we focus on improving the numbers that actually matter to your business.",
-    tags: [
-      "10+ Years Experience",
-      "100+ Businesses Served",
-      "ROI-Focused Campaigns",
-      "Continuous Optimization",
-    ],
-  },
-  {
-    title: "Website Development",
-    description:
-      "Create a website that works as a 24/7 business and sales asset. We build responsive, fast, conversion-focused websites designed to turn visitors into inquiries, leads, and customers.",
-    tags: [
-      "Mobile-First",
-      "Conversion-Focused",
-      "SEO-Ready",
-      "Fast & Responsive",
-      "Business & E-commerce",
-    ],
-  },
-  {
     title: "AI Automation",
     description:
       "Replace repetitive manual work with intelligent systems. We use AI and automation to streamline lead management, customer communication, internal workflows, and everyday business operations.",
