@@ -54,8 +54,9 @@ export function WhyBedifly() {
           {problems.map((p) => (
             <div
               key={p.q}
-              className="glass rounded-2xl p-5 border border-white/10 hover:border-orange/40 transition-colors"
+              className="rounded-2xl p-5 bg-white/[0.06] border border-white/10 hover:bg-white/[0.1] hover:border-orange/40 transition-colors"
             >
+
               <div className="flex items-start gap-3">
                 <ArrowRight className="mt-1 h-5 w-5 shrink-0 text-orange" />
                 <div>
