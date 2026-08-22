@@ -31,7 +31,7 @@ export function WhyBedifly() {
 
       <div className="relative max-w-6xl mx-auto grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
         {/* Left: heading + intro + CTA */}
-        <div className="text-center lg:text-left">
+        <div className="text-center">
           <div className="text-xs uppercase tracking-[0.2em] text-orange font-bold mb-4">
             Why Bedifly
           </div>

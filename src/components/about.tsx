@@ -28,7 +28,7 @@ export function About() {
           </div>
         </div>
 
-        <div className="text-center md:text-left">
+        <div className="text-center">
           <div className="text-xs uppercase tracking-[0.2em] text-orange font-bold mb-4">
             About Bedifly
           </div>

@@ -9,7 +9,7 @@ export function ContactForm() {
   return (
     <section id="contact" className="relative py-28 px-6">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-14 items-start">
-        <div className="text-center md:text-left">
+        <div className="text-center">
           <div className="text-xs uppercase tracking-[0.2em] text-orange font-bold mb-4">
             Let's talk
           </div>
