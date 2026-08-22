@@ -3,6 +3,7 @@ import { Nav } from "@/components/nav";
 import { Hero } from "@/components/hero";
 import { WhyBedifly } from "@/components/why-bedifly";
 import { Services } from "@/components/services";
+import { GrowthJourney } from "@/components/growth-journey";
 import { About } from "@/components/about";
 import { Brands } from "@/components/brands";
 import { Testimonials } from "@/components/testimonials";
@@ -38,6 +39,7 @@ function Landing() {
       <Hero />
       <WhyBedifly />
       <Services />
+      <GrowthJourney />
       <About />
       <Brands />
       <Testimonials />
