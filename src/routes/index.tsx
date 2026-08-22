@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Nav } from "@/components/nav";
 import { Hero } from "@/components/hero";
+import { WhyBedifly } from "@/components/why-bedifly";
 import { Services } from "@/components/services";
 import { About } from "@/components/about";
 import { Brands } from "@/components/brands";
@@ -35,6 +36,7 @@ function Landing() {
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <Nav />
       <Hero />
+      <WhyBedifly />
       <Services />
       <About />
       <Brands />
