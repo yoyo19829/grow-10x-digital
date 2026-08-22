@@ -60,8 +60,9 @@ export function WhyBedifly() {
               <div className="flex items-start gap-3">
                 <ArrowRight className="mt-1 h-5 w-5 shrink-0 text-orange" />
                 <div>
-                  <p className="font-semibold text-primary-foreground">{p.q}</p>
-                  <p className="text-sm text-primary-foreground/60 mt-1">{p.a}</p>
+                  <p className="font-semibold text-primary-foreground/95">{p.q}</p>
+                  <p className="text-sm text-primary-foreground/65 mt-1">{p.a}</p>
+
                 </div>
               </div>
             </div>
