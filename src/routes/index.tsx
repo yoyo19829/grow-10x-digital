@@ -36,6 +36,7 @@ function Landing() {
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <Nav />
       <Hero />
+      <WhyBedifly />
       <Services />
       <About />
       <Brands />
