@@ -4,10 +4,10 @@ export function Brands() {
   return (
     <section id="brands" className="py-24 px-6">
       <div className="max-w-6xl mx-auto text-center">
-        <div className="text-xs uppercase tracking-[0.2em] text-orange font-semibold mb-4">
+        <div className="text-xs uppercase tracking-[0.2em] text-orange font-bold mb-4">
           Trusted by
         </div>
-        <h2 className="text-4xl md:text-5xl font-bold text-navy-deep">
+        <h2 className="text-4xl md:text-5xl font-extrabold text-navy-deep">
           Brands we're scaling <span className="text-gradient-brand">right now.</span>
         </h2>
         <p className="mt-4 text-muted-foreground max-w-xl mx-auto">
