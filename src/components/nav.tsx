@@ -5,8 +5,9 @@ export function Nav() {
     <header className="fixed top-4 inset-x-0 z-50 flex justify-center px-4">
       <nav className="glass w-full max-w-6xl rounded-full px-5 py-2.5 flex items-center justify-between shadow-soft">
         <BrandLogo />
-        <div className="hidden md:flex items-center gap-8 text-sm font-medium text-foreground/80">
+        <div className="hidden md:flex items-center gap-7 text-sm font-medium text-foreground/80">
           <a href="#services" className="hover:text-orange transition">Services</a>
+          <a href="#results" className="hover:text-orange transition">Case Studies</a>
           <a href="#about" className="hover:text-orange transition">About</a>
           <a href="#brands" className="hover:text-orange transition">Clients</a>
           <a href="#reviews" className="hover:text-orange transition">Reviews</a>
