@@ -4,6 +4,7 @@ import { Hero } from "@/components/hero";
 import { WhyBedifly } from "@/components/why-bedifly";
 import { Services } from "@/components/services";
 import { GrowthJourney } from "@/components/growth-journey";
+import { ProvenGrowth } from "@/components/proven-growth";
 import { About } from "@/components/about";
 import { Brands } from "@/components/brands";
 import { Testimonials } from "@/components/testimonials";
@@ -40,6 +41,7 @@ function Landing() {
       <WhyBedifly />
       <Services />
       <GrowthJourney />
+      <ProvenGrowth />
       <About />
       <Brands />
       <Testimonials />
