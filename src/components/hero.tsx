@@ -45,7 +45,7 @@ export function Hero() {
         <div className="mt-16 grid grid-cols-3 gap-4 max-w-3xl mx-auto">
           {[
             { target: 10, suffix: "+", label: "Years scaling brands" },
-            { target: 50, suffix: "+", label: "Brands served" },
+            { target: 100, suffix: "+", label: "Brands served" },
             { target: 10, prefix: "", suffix: "Cr+", label: "Ad spend managed" },
           ].map((s) => (
             <div key={s.label} className="glass rounded-2xl p-5 shadow-soft">
