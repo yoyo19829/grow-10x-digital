@@ -3,6 +3,7 @@ import { Nav } from "@/components/nav";
 import { Hero } from "@/components/hero";
 import { WhyBedifly } from "@/components/why-bedifly";
 import { Services } from "@/components/services";
+import { GrowthSystem } from "@/components/growth-system";
 import { About } from "@/components/about";
 import { Brands } from "@/components/brands";
 import { Testimonials } from "@/components/testimonials";
@@ -18,7 +19,10 @@ export const Route = createFileRoute("/")({
         content:
           "Bedifly is a performance-driven digital marketing agency helping brands grow 10x with paid ads, SEO, social media, and creative that converts.",
       },
-      { property: "og:title", content: "Bedifly — Grow 10x With Performance Marketing" },
+      {
+        property: "og:title",
+        content: "Bedifly — Grow 10x With Performance Marketing",
+      },
       {
         property: "og:description",
         content:
@@ -38,6 +42,7 @@ function Landing() {
       <Hero />
       <WhyBedifly />
       <Services />
+      <GrowthSystem />
       <About />
       <Brands />
       <Testimonials />
