@@ -12,141 +12,169 @@ const services: Service[] = [
     num: "01",
     title: "Performance Marketing",
     description:
-      "Build campaigns around measurable growth, not vanity metrics. From strategy and audience research to optimization and reporting, we focus on improving the numbers that actually matter to your business.",
+      "Data-driven campaigns focused on profitable growth, better acquisition costs, and measurable ROI.",
     tags: [
-      "10+ Years Experience",
-      "100+ Businesses Served",
-      "ROI-Focused Campaigns",
-      "Continuous Optimization",
+      "ROI-Focused",
+      "Audience Research",
+      "Campaign Optimization",
+      "Performance Tracking",
     ],
   },
   {
     num: "02",
     title: "Website Development",
     description:
-      "Create a website that works as a 24/7 business and sales asset. We build responsive, fast, conversion-focused websites designed to turn visitors into inquiries, leads, and customers.",
+      "Fast, responsive, conversion-focused websites designed to turn visitors into enquiries and customers.",
     tags: [
       "Mobile-First",
       "Conversion-Focused",
       "SEO-Ready",
       "Fast & Responsive",
-      "Business & E-commerce",
     ],
   },
   {
     num: "03",
     title: "AI Automation",
     description:
-      "Replace repetitive manual work with intelligent systems. We use AI and automation to streamline lead management, customer communication, internal workflows, and everyday business operations.",
+      "Intelligent systems that automate lead management, customer communication, and repetitive business workflows.",
     tags: [
-      "24/7 Automation",
-      "AI-Powered Workflows",
+      "AI Workflows",
       "Lead Qualification",
       "Automated Follow-Ups",
-      "Time-Saving Systems",
+      "24/7 Automation",
     ],
   },
   {
     num: "04",
     title: "Lead Generation",
     description:
-      "Build a predictable pipeline of potential customers through targeted acquisition systems. We focus on improving both lead volume and lead quality, so your sales team spends more time talking to genuine prospects.",
+      "Build a predictable pipeline of qualified prospects while improving both lead volume and lead quality.",
     tags: [
-      "Multi-Channel Acquisition",
       "Qualified Leads",
+      "Multi-Channel",
       "Lead Tracking",
-      "Automated Follow-Ups",
-      "Conversion-Focused Systems",
+      "Conversion-Focused",
     ],
   },
   {
     num: "05",
     title: "Google & Meta Ads",
     description:
-      "Reach customers across the two largest digital advertising ecosystems. We combine audience strategy, creative testing, campaign optimization, and conversion tracking to continuously improve advertising performance.",
+      "Reach the right customers with strategic targeting, creative testing, conversion tracking, and optimization.",
     tags: [
       "Google Ads",
-      "Facebook Ads",
-      "Instagram Ads",
+      "Meta Ads",
       "Retargeting",
       "Conversion Tracking",
-      "Performance Optimization",
     ],
   },
   {
     num: "06",
     title: "WhatsApp Automation",
     description:
-      "Turn WhatsApp into an automated customer acquisition and communication channel. Respond instantly, qualify prospects, follow up automatically, and keep conversations moving—even outside business hours.",
+      "Automate responses, qualification, follow-ups, reminders, and customer conversations on WhatsApp.",
     tags: [
       "24/7 Responses",
-      "Instant Follow-Ups",
-      "Lead Qualification",
       "AI Conversations",
-      "Automated Reminders",
-      "Customer Support",
+      "Lead Qualification",
+      "Automated Follow-Ups",
     ],
   },
 ];
 
 export function Services() {
   return (
-    <section id="services" className="relative py-28 px-6">
+    <section id="services" className="relative py-20 px-6">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center max-w-2xl mx-auto">
-          <div className="text-xs uppercase tracking-[0.2em] text-orange font-bold mb-4">
+
+        {/* HEADER */}
+        <div className="text-center max-w-3xl mx-auto">
+
+          <div className="text-[11px] uppercase tracking-[0.18em] text-orange font-bold mb-3">
             What We Do
           </div>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-navy-deep leading-[1.1]">
-            Everything you need to <span className="text-gradient-orange">grow 10x.</span>
+
+          <h2 className="text-4xl md:text-5xl font-extrabold text-navy-deep leading-tight">
+            Everything you need to{" "}
+            <span className="text-gradient-orange">
+              grow 10x.
+            </span>
           </h2>
-          <p className="mt-6 text-muted-foreground text-base md:text-lg">
-            Six core services that work together to drive measurable growth for your business.
+
+          <p className="mt-4 text-sm md:text-base text-muted-foreground">
+            Six core services working together to drive measurable business
+            growth.
           </p>
+
         </div>
 
-        <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-stretch">
+        {/* SERVICES */}
+        <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+
           {services.map((s, i) => (
             <div
               key={s.num}
-              className="group relative h-full rounded-3xl border border-border bg-card p-8 shadow-soft hover:shadow-navy hover:-translate-y-1 hover:border-orange/40 transition-all overflow-hidden flex flex-col"
+              className="group relative rounded-[1.5rem] border border-border bg-card p-6 shadow-soft hover:shadow-navy hover:-translate-y-1 hover:border-orange/40 transition-all overflow-hidden"
               style={{ transitionDelay: `${i * 40}ms` }}
             >
-              <div className="absolute -top-16 -right-16 h-40 w-40 rounded-full bg-orange/10 blur-2xl group-hover:bg-orange/25 transition" />
 
-              <div className="relative flex flex-1 flex-col">
+              {/* SUBTLE ORANGE GLOW */}
+              <div className="absolute -top-20 -right-20 h-40 w-40 rounded-full bg-orange/10 blur-3xl group-hover:bg-orange/20 transition" />
+
+              <div className="relative">
+
+                {/* NUMBER + TITLE */}
                 <div className="flex items-center gap-3">
-                  <span className="text-5xl font-extrabold text-navy-deep/10 group-hover:text-orange/30 transition-colors leading-none">
-                    {s.num}
-                  </span>
-                  <h3 className="text-xl font-bold text-navy-deep">{s.title}</h3>
+
+                  {/* VIBRANT NUMBER */}
+                  <div className="relative flex items-center justify-center shrink-0">
+
+                    <div className="absolute h-9 w-9 rounded-full bg-orange/10 blur-md group-hover:bg-orange/20 transition" />
+
+                    <span className="relative flex h-9 w-9 items-center justify-center rounded-full bg-orange-gradient text-[11px] font-extrabold text-white shadow-glow">
+                      {s.num}
+                    </span>
+
+                  </div>
+
+                  <h3 className="text-lg font-bold text-navy-deep">
+                    {s.title}
+                  </h3>
+
                 </div>
 
-                <p className="mt-5 text-sm leading-relaxed text-muted-foreground flex-1">
+                {/* DESCRIPTION */}
+                <p className="mt-4 text-xs md:text-sm leading-relaxed text-muted-foreground">
                   {s.description}
                 </p>
 
-                <div className="mt-6 flex flex-wrap gap-2">
+                {/* TAGS */}
+                <div className="mt-5 flex flex-wrap gap-1.5">
+
                   {s.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="inline-flex items-center rounded-full bg-orange/10 px-3 py-1 text-xs font-medium text-navy-deep/80 group-hover:bg-orange/15 transition-colors"
+                      className="inline-flex items-center rounded-full bg-orange/10 px-2.5 py-1 text-[10px] font-medium text-navy-deep/80 group-hover:bg-orange/15 transition-colors"
                     >
                       {tag}
                     </span>
                   ))}
+
                 </div>
 
+                {/* CTA */}
                 <a
                   href="#contact"
-                  className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-navy-deep group-hover:text-orange transition-colors"
+                  className="mt-5 inline-flex items-center gap-2 text-xs font-semibold text-navy-deep group-hover:text-orange transition-colors"
                 >
                   Get Started
-                  <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
                 </a>
+
               </div>
             </div>
           ))}
+
         </div>
       </div>
     </section>

@@ -1,5 +1,5 @@
 const DEFAULT_WEBHOOK_URL =
-  "https://script.google.com/macros/s/AKfycbyLEVhNXGo6gyjrUKD0IEFAkr2Ym15SHTdW_UID4BMlYqZh-A-chPNADREQS-L9HZyP/exec";
+  "https://script.google.com/macros/s/AKfycbxdl3oAYq7RQtpHrtBwKvqcBObLAAnV3KfnST3BNuZ9ooq7YVu7b37GCjgvQMd68NEs/exec";
 
 const WEBHOOK_URL =
   (import.meta.env["VITE_GOOGLE_SHEETS_WEBHOOK_URL"] as string | undefined) ||
@@ -13,11 +13,15 @@ export async function submitLead(data: {
   city: string;
 }) {
   try {
-    await fetch(WEBHOOK_URL, {
+    const response = await fetch(WEBHOOK_URL, {
       method: "POST",
-      headers: { "content-type": "text/plain;charset=utf-8" },
+      headers: {
+        "Content-Type": "text/plain;charset=utf-8",
+      },
       body: JSON.stringify({
-        timestamp: new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" }),
+        timestamp: new Date().toLocaleString("en-IN", {
+          timeZone: "Asia/Kolkata",
+        }),
         name: data.name,
         company: data.company,
         email: data.email,
@@ -27,9 +31,23 @@ export async function submitLead(data: {
       redirect: "follow",
     });
 
-    return { ok: true };
+    if (!response.ok) {
+      console.error("Google Sheets error:", response.status);
+      return {
+        ok: false,
+        error: "Unable to submit your details. Please try again.",
+      };
+    }
+
+    return {
+      ok: true,
+    };
   } catch (err) {
     console.error("Lead submission error:", err);
-    return { ok: false, error: "Network error. Please try again or call us directly." };
+
+    return {
+      ok: false,
+      error: "Network error. Please try again or call us directly.",
+    };
   }
 }
