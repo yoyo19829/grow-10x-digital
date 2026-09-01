@@ -1,7 +1,6 @@
 import { ArrowRight } from "lucide-react";
 
 type Service = {
-  num: string;
   title: string;
   description: string;
   tags: string[];
@@ -9,7 +8,6 @@ type Service = {
 
 const services: Service[] = [
   {
-    num: "01",
     title: "Performance Marketing",
     description:
       "Data-driven campaigns focused on profitable growth, better acquisition costs, and measurable ROI.",
@@ -21,7 +19,6 @@ const services: Service[] = [
     ],
   },
   {
-    num: "02",
     title: "Website Development",
     description:
       "Fast, responsive, conversion-focused websites designed to turn visitors into enquiries and customers.",
@@ -33,7 +30,6 @@ const services: Service[] = [
     ],
   },
   {
-    num: "03",
     title: "AI Automation",
     description:
       "Intelligent systems that automate lead management, customer communication, and repetitive business workflows.",
@@ -45,7 +41,6 @@ const services: Service[] = [
     ],
   },
   {
-    num: "04",
     title: "Lead Generation",
     description:
       "Build a predictable pipeline of qualified prospects while improving both lead volume and lead quality.",
@@ -57,7 +52,6 @@ const services: Service[] = [
     ],
   },
   {
-    num: "05",
     title: "Google & Meta Ads",
     description:
       "Reach the right customers with strategic targeting, creative testing, conversion tracking, and optimization.",
@@ -69,7 +63,6 @@ const services: Service[] = [
     ],
   },
   {
-    num: "06",
     title: "WhatsApp Automation",
     description:
       "Automate responses, qualification, follow-ups, reminders, and customer conversations on WhatsApp.",
