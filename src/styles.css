@@ -178,9 +178,11 @@
 @utility shadow-soft {
   box-shadow: var(--shadow-soft);
 }
+
 @utility shadow-glow {
   box-shadow: var(--shadow-glow);
 }
+
 @utility shadow-navy {
   box-shadow: var(--shadow-navy);
 }
@@ -196,9 +198,11 @@
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -209,33 +213,40 @@
   100% {
     transform: translateY(0) rotate(0);
   }
+
   50% {
     transform: translateY(-24px) rotate(6deg);
   }
 }
+
 @keyframes float-slower {
   0%,
   100% {
     transform: translateY(0) rotate(0);
   }
+
   50% {
     transform: translateY(20px) rotate(-8deg);
   }
 }
+
 @keyframes marquee {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
 }
+
 @keyframes glow-pulse {
   0%,
   100% {
     opacity: 0.6;
     transform: scale(1);
   }
+
   50% {
     opacity: 1;
     transform: scale(1.08);
@@ -245,12 +256,334 @@
 @utility animate-float-slow {
   animation: float-slow 8s ease-in-out infinite;
 }
+
 @utility animate-float-slower {
   animation: float-slower 11s ease-in-out infinite;
 }
+
 @utility animate-marquee {
   animation: marquee 30s linear infinite;
 }
+
 @utility animate-glow-pulse {
   animation: glow-pulse 4s ease-in-out infinite;
+}
+
+
+/* =========================================
+   WORDPRESS BLOG CONTENT
+   ========================================= */
+
+.blog-content {
+  width: 100%;
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  font-size: 18px;
+  line-height: 1.85;
+}
+
+/* Paragraphs */
+
+.blog-content p {
+  margin: 0 0 1.5rem;
+}
+
+/* Main headings */
+
+.blog-content h1 {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: 800;
+  color: var(--navy-deep);
+  margin: 3.5rem 0 1.25rem;
+  letter-spacing: -0.025em;
+}
+
+/* Section headings */
+
+.blog-content h2 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  line-height: 1.25;
+  font-weight: 750;
+  color: var(--navy-deep);
+  margin: 3.5rem 0 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+/* Sub-sections */
+
+.blog-content h3 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  line-height: 1.3;
+  font-weight: 700;
+  color: var(--navy-deep);
+  margin: 2.5rem 0 1rem;
+}
+
+/* Smaller headings */
+
+.blog-content h4 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  line-height: 1.35;
+  font-weight: 700;
+  color: var(--navy-deep);
+  margin: 2rem 0 0.75rem;
+}
+
+/* Bold text */
+
+.blog-content strong,
+.blog-content b {
+  color: var(--navy-deep);
+  font-weight: 700;
+}
+
+/* Links */
+
+.blog-content a {
+  color: var(--orange);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.blog-content a:hover {
+  opacity: 0.8;
+}
+
+/* Lists */
+
+.blog-content ul,
+.blog-content ol {
+  margin: 1.5rem 0 2rem;
+  padding-left: 2rem;
+}
+
+.blog-content ul {
+  list-style-type: disc;
+}
+
+.blog-content ol {
+  list-style-type: decimal;
+}
+
+.blog-content li {
+  margin: 0.65rem 0;
+  padding-left: 0.3rem;
+}
+
+/* Nested lists */
+
+.blog-content li > ul,
+.blog-content li > ol {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Quotes */
+
+.blog-content blockquote {
+  margin: 2.5rem 0;
+  padding: 1.5rem 1.75rem;
+  border-left: 4px solid var(--orange);
+  background: color-mix(in oklab, var(--orange) 7%, white);
+  border-radius: 0 1rem 1rem 0;
+  color: var(--navy-deep);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  font-style: italic;
+}
+
+/* WordPress quote blocks */
+
+.blog-content .wp-block-quote {
+  margin: 2.5rem 0;
+  padding: 1.5rem 1.75rem;
+  border-left: 4px solid var(--orange);
+  background: color-mix(in oklab, var(--orange) 7%, white);
+  border-radius: 0 1rem 1rem 0;
+}
+
+/* WordPress separators */
+
+.blog-content hr,
+.blog-content .wp-block-separator {
+  margin: 3rem 0;
+  border: 0;
+  border-top: 1px solid var(--border);
+}
+
+/* Images */
+
+.blog-content img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  margin: 2.5rem auto;
+  border-radius: 1rem;
+}
+
+/* WordPress image blocks */
+
+.blog-content figure {
+  margin: 2.5rem 0;
+}
+
+.blog-content figure img {
+  margin: 0 auto;
+}
+
+.blog-content figcaption {
+  margin-top: 0.75rem;
+  text-align: center;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--muted-foreground);
+}
+
+/* Tables */
+
+.blog-content table {
+  width: 100%;
+  margin: 2.5rem 0;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.blog-content th,
+.blog-content td {
+  border: 1px solid var(--border);
+  padding: 0.85rem 1rem;
+  text-align: left;
+}
+
+.blog-content th {
+  background: var(--muted);
+  color: var(--navy-deep);
+  font-weight: 700;
+}
+
+.blog-content tr:nth-child(even) td {
+  background: color-mix(in oklab, var(--muted) 40%, white);
+}
+
+/* Code */
+
+.blog-content code {
+  padding: 0.15rem 0.4rem;
+  border-radius: 0.35rem;
+  background: var(--muted);
+  font-size: 0.9em;
+}
+
+.blog-content pre {
+  margin: 2rem 0;
+  padding: 1.25rem;
+  overflow-x: auto;
+  border-radius: 1rem;
+  background: var(--navy-deep);
+  color: white;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.blog-content pre code {
+  padding: 0;
+  background: transparent;
+  color: inherit;
+}
+
+/* Videos / embeds */
+
+.blog-content video,
+.blog-content iframe {
+  display: block;
+  max-width: 100%;
+  margin: 2.5rem auto;
+  border-radius: 1rem;
+}
+
+/* WordPress buttons */
+
+.blog-content .wp-block-button {
+  margin: 2rem 0;
+}
+
+.blog-content .wp-block-button__link {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  border-radius: 999px;
+  background: var(--navy-deep);
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.blog-content .wp-block-button__link:hover {
+  background: var(--orange);
+  color: white;
+  opacity: 1;
+}
+
+/* First and last elements */
+
+.blog-content > *:first-child {
+  margin-top: 0;
+}
+
+.blog-content > *:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================
+   MOBILE BLOG CONTENT
+   ========================================= */
+
+@media (max-width: 768px) {
+  .blog-content {
+    max-width: 100%;
+    font-size: 16px;
+    line-height: 1.75;
+  }
+
+  .blog-content h1 {
+    font-size: 2rem;
+    margin-top: 2.5rem;
+  }
+
+  .blog-content h2 {
+    font-size: 1.65rem;
+    margin-top: 2.5rem;
+  }
+
+  .blog-content h3 {
+    font-size: 1.3rem;
+    margin-top: 2rem;
+  }
+
+  .blog-content h4 {
+    font-size: 1.15rem;
+  }
+
+  .blog-content blockquote,
+  .blog-content .wp-block-quote {
+    padding: 1.25rem;
+    margin: 2rem 0;
+  }
+
+  .blog-content table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
 }
