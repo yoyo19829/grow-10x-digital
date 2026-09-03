@@ -30,7 +30,8 @@ export function ProvenGrowth() {
             Proven Growth. <span className="text-gradient-orange">Measurable Results.</span>
           </h2>
           <p className="mt-5 text-base md:text-lg text-muted-foreground leading-relaxed">
-            Real performance backed by verified metrics. Here is how strategic performance marketing scaled lead volume, cut acquisition costs, and dramatically improved conversion rates.
+            Real performance backed by verified metrics. Here is how strategic performance marketing
+            scaled lead volume, cut acquisition costs, and dramatically improved conversion rates.
           </p>
         </div>
 
@@ -85,7 +86,9 @@ export function ProvenGrowth() {
                 <div className="h-9 w-9 rounded-xl bg-orange/15 text-orange flex items-center justify-center shrink-0">
                   <Target className="h-4 w-4" />
                 </div>
-                <div className="text-sm font-semibold text-navy-deep">Detailed Audience Targeting</div>
+                <div className="text-sm font-semibold text-navy-deep">
+                  Detailed Audience Targeting
+                </div>
               </div>
 
               <div className="p-4 rounded-2xl bg-secondary/50 border border-border flex items-center gap-3">
@@ -123,16 +126,16 @@ export function ProvenGrowth() {
 
                 <div className="flex flex-col items-center text-orange px-2">
                   <ArrowRight className="h-6 w-6 stroke-[2.5]" />
-                  <span className="text-[10px] font-bold uppercase tracking-wider mt-0.5">30-day</span>
+                  <span className="text-[10px] font-bold uppercase tracking-wider mt-0.5">
+                    30-day
+                  </span>
                 </div>
 
                 <div>
                   <div className="text-xs uppercase tracking-wider text-orange font-bold">
                     After
                   </div>
-                  <div className="mt-1 text-4xl md:text-5xl font-black text-navy-deep">
-                    ₹120
-                  </div>
+                  <div className="mt-1 text-4xl md:text-5xl font-black text-navy-deep">₹120</div>
                   <div className="text-xs font-semibold text-orange">$1.25 CPL</div>
                 </div>
               </div>
@@ -162,16 +165,16 @@ export function ProvenGrowth() {
 
                 <div className="flex flex-col items-center text-orange px-2">
                   <ArrowRight className="h-6 w-6 stroke-[2.5]" />
-                  <span className="text-[10px] font-bold uppercase tracking-wider mt-0.5">30-day</span>
+                  <span className="text-[10px] font-bold uppercase tracking-wider mt-0.5">
+                    30-day
+                  </span>
                 </div>
 
                 <div>
                   <div className="text-xs uppercase tracking-wider text-orange font-bold">
                     After
                   </div>
-                  <div className="mt-1 text-4xl md:text-5xl font-black text-navy-deep">
-                    4.5%
-                  </div>
+                  <div className="mt-1 text-4xl md:text-5xl font-black text-navy-deep">4.5%</div>
                   <div className="text-xs font-semibold text-orange">Conversion Rate</div>
                 </div>
               </div>

@@ -2,15 +2,8 @@ import { createServerFn } from "@tanstack/react-start";
 
 export const submitLead = createServerFn({ method: "POST" })
   .inputValidator(
-    (data: {
-      name: string;
-      company: string;
-      email: string;
-      mobile: string;
-      city: string;
-    }) => {
-      if (!data.name || !data.email || !data.mobile)
-        throw new Error("Missing required fields");
+    (data: { name: string; company: string; email: string; mobile: string; city: string }) => {
+      if (!data.name || !data.email || !data.mobile) throw new Error("Missing required fields");
       return data;
     },
   )

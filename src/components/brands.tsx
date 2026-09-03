@@ -6,17 +6,13 @@ export function Brands() {
   return (
     <section id="brands" className="py-20 px-6 overflow-hidden">
       <div className="max-w-6xl mx-auto text-center">
-
         {/* HEADER */}
         <div className="text-[11px] uppercase tracking-[0.18em] text-orange font-bold mb-3">
           Trusted by
         </div>
 
         <h2 className="text-4xl md:text-5xl font-extrabold text-navy-deep">
-          Brands we're scaling{" "}
-          <span className="text-gradient-brand">
-            right now.
-          </span>
+          Brands we're scaling <span className="text-gradient-brand">right now.</span>
         </h2>
 
         <p className="mt-4 text-sm md:text-base text-muted-foreground max-w-xl mx-auto">
@@ -25,7 +21,6 @@ export function Brands() {
 
         {/* LOGO SLIDER */}
         <div className="relative mt-10 overflow-hidden">
-
           {/* LEFT FADE */}
           <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-background to-transparent z-10" />
 

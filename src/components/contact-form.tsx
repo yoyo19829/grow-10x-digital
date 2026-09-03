@@ -9,29 +9,23 @@ export function ContactForm() {
   return (
     <section id="contact" className="relative py-20 px-6">
       <div className="max-w-6xl mx-auto grid md:grid-cols-[0.9fr_1fr] gap-8 lg:gap-10 items-center">
-
         {/* LEFT */}
         <div className="text-left">
-
           <div className="text-[11px] uppercase tracking-[0.18em] text-orange font-bold mb-3">
             Let's talk
           </div>
 
           <h2 className="text-4xl md:text-[46px] font-extrabold text-navy-deep leading-[1.05]">
-            Ready to{" "}
-            <span className="text-gradient-orange">
-              grow 10x?
-            </span>
+            Ready to <span className="text-gradient-orange">grow 10x?</span>
           </h2>
 
           <p className="mt-4 text-sm md:text-base text-muted-foreground leading-relaxed max-w-md">
-            Tell us about your brand. We'll get back within 24 hours with an
-            honest, no-fluff plan for the next 90 days.
+            Tell us about your brand. We'll get back within 24 hours with an honest, no-fluff plan
+            for the next 90 days.
           </p>
 
           {/* CONTACT DETAILS */}
           <div className="mt-7 max-w-lg space-y-1">
-
             <ContactRow icon={MapPin} title="Ahmedabad Office">
               4th Floor, C Wing, Krish Cubical, Thaltej, Ahmedabad
             </ContactRow>
@@ -47,7 +41,6 @@ export function ContactForm() {
             <ContactRow icon={Phone} title="Phone">
               +91 97524 73349
             </ContactRow>
-
           </div>
         </div>
 
@@ -78,37 +71,23 @@ export function ContactForm() {
             if (res.ok) {
               setSent(true);
 
-              toast.success(
-                "Thank you! Your details have been submitted."
-              );
+              toast.success("Thank you! Your details have been submitted.");
 
               form.reset();
             } else {
               toast.error(
-                res.error ??
-                  "Something went wrong. Please try again or call us directly."
+                res.error ?? "Something went wrong. Please try again or call us directly.",
               );
             }
           }}
           className="glass rounded-[1.75rem] p-6 md:p-7 shadow-navy"
         >
-
           {/* FIELDS */}
           <div className="space-y-4">
-
             <div className="grid sm:grid-cols-2 gap-4">
-              <Field
-                label="Full name"
-                name="name"
-                placeholder="Ridhima Shah"
-                required
-              />
+              <Field label="Full name" name="name" placeholder="Ridhima Shah" required />
 
-              <Field
-                label="Company"
-                name="company"
-                placeholder="Luméa Skincare"
-              />
+              <Field label="Company" name="company" placeholder="Luméa Skincare" />
             </div>
 
             <div className="grid sm:grid-cols-2 gap-4">
@@ -120,26 +99,14 @@ export function ContactForm() {
                 required
               />
 
-              <Field
-                label="City"
-                name="city"
-                placeholder="Ahmedabad"
-              />
+              <Field label="City" name="city" placeholder="Ahmedabad" />
             </div>
 
-            <Field
-              label="Email"
-              name="email"
-              type="email"
-              placeholder="you@brand.com"
-              required
-            />
-
+            <Field label="Email" name="email" type="email" placeholder="you@brand.com" required />
           </div>
 
           {/* BUTTONS */}
           <div className="mt-5 space-y-3">
-
             <button
               type="submit"
               disabled={submitting}
@@ -164,14 +131,11 @@ export function ContactForm() {
               <Phone className="h-4 w-4" />
               Call now: +91 97524 73349
             </a>
-
           </div>
 
           <p className="mt-4 text-[11px] text-muted-foreground text-center">
-            By submitting, you agree to be contacted by Bedifly. We never share
-            your info.
+            By submitting, you agree to be contacted by Bedifly. We never share your info.
           </p>
-
         </form>
       </div>
     </section>
@@ -190,23 +154,15 @@ function ContactRow({
 }) {
   return (
     <div className="group flex items-center gap-3 rounded-xl px-2 py-2.5 transition-all duration-300 hover:bg-white/60">
-
       <div className="h-9 w-9 rounded-xl bg-orange-gradient text-white grid place-items-center shrink-0 shadow-glow">
         <Icon className="h-4 w-4" strokeWidth={2} />
       </div>
 
       <div className="min-w-0">
+        <div className="text-sm font-bold text-navy-deep leading-5">{title}</div>
 
-        <div className="text-sm font-bold text-navy-deep leading-5">
-          {title}
-        </div>
-
-        <div className="text-xs md:text-sm text-muted-foreground leading-5">
-          {children}
-        </div>
-
+        <div className="text-xs md:text-sm text-muted-foreground leading-5">{children}</div>
       </div>
-
     </div>
   );
 }
@@ -227,15 +183,12 @@ function Field({
 }) {
   return (
     <div>
-
       <label
         htmlFor={name}
         className="block text-[10px] font-bold text-navy-deep mb-1.5 uppercase tracking-wider"
       >
         {label}
-        {required && (
-          <span className="text-orange ml-1">*</span>
-        )}
+        {required && <span className="text-orange ml-1">*</span>}
       </label>
 
       <input
@@ -246,7 +199,6 @@ function Field({
         required={required}
         className="w-full rounded-xl border border-border bg-white/70 px-4 py-2.5 text-sm text-navy-deep placeholder:text-muted-foreground/70 focus:outline-none focus:ring-2 focus:ring-orange/50 focus:border-orange transition"
       />
-
     </div>
   );
 }

@@ -39,7 +39,7 @@ function BlogsPage() {
     async function fetchBlogs() {
       try {
         const response = await fetch(
-          "https://www.bedifly.com/wp-json/wp/v2/posts?status=publish&per_page=12&_embed"
+          "https://www.bedifly.com/wp-json/wp/v2/posts?status=publish&per_page=12&_embed",
         );
 
         if (!response.ok) {
@@ -65,29 +65,22 @@ function BlogsPage() {
 
       <section className="px-6 pt-32 pb-20">
         <div className="max-w-6xl mx-auto">
-
           <div className="text-center max-w-3xl mx-auto">
             <div className="text-[11px] uppercase tracking-[0.18em] text-orange font-bold mb-3">
               Insights
             </div>
 
             <h1 className="text-4xl md:text-5xl font-extrabold text-navy-deep">
-              Bedifly{" "}
-              <span className="text-gradient-orange">
-                Blogs
-              </span>
+              Bedifly <span className="text-gradient-orange">Blogs</span>
             </h1>
 
             <p className="mt-4 text-sm md:text-base text-muted-foreground">
-              Practical insights on marketing, AI, websites, lead generation,
-              and business growth.
+              Practical insights on marketing, AI, websites, lead generation, and business growth.
             </p>
           </div>
 
           {loading && (
-            <div className="mt-12 text-center text-muted-foreground">
-              Loading blogs...
-            </div>
+            <div className="mt-12 text-center text-muted-foreground">Loading blogs...</div>
           )}
 
           {error && (
@@ -103,24 +96,16 @@ function BlogsPage() {
               ))}
             </div>
           )}
-
         </div>
       </section>
     </main>
   );
 }
 
-function BlogCard({
-  post,
-}: {
-  post: WordPressPost;
-}) {
-  const image =
-    post._embedded?.["wp:featuredmedia"]?.[0]?.source_url;
+function BlogCard({ post }: { post: WordPressPost }) {
+  const image = post._embedded?.["wp:featuredmedia"]?.[0]?.source_url;
 
-  const category =
-    post._embedded?.["wp:term"]?.[0]?.[0]?.name ||
-    "Business Growth";
+  const category = post._embedded?.["wp:term"]?.[0]?.[0]?.name || "Business Growth";
 
   const excerpt = post.excerpt.rendered
     .replace(/<[^>]*>/g, "")
@@ -138,7 +123,6 @@ function BlogCard({
 
   return (
     <article className="group overflow-hidden rounded-[1.5rem] border border-border bg-card shadow-soft hover:shadow-navy hover:-translate-y-1 transition-all">
-
       {image && (
         <div className="aspect-[16/9] overflow-hidden">
           <img
@@ -150,15 +134,12 @@ function BlogCard({
       )}
 
       <div className="p-6">
-
         <div className="flex items-center justify-between gap-3">
           <div className="text-[10px] uppercase tracking-wider font-bold text-orange">
             {category}
           </div>
 
-          <div className="text-[11px] text-muted-foreground">
-            {date}
-          </div>
+          <div className="text-[11px] text-muted-foreground">{date}</div>
         </div>
 
         <h2
@@ -168,9 +149,7 @@ function BlogCard({
           }}
         />
 
-        <p className="mt-3 text-sm text-muted-foreground leading-relaxed line-clamp-3">
-          {excerpt}
-        </p>
+        <p className="mt-3 text-sm text-muted-foreground leading-relaxed line-clamp-3">{excerpt}</p>
 
         <Link
           to="/blogs/$slug"
@@ -179,7 +158,6 @@ function BlogCard({
         >
           Read article →
         </Link>
-
       </div>
     </article>
   );

@@ -1,60 +1,40 @@
+import { Link } from "@tanstack/react-router";
 import { BrandLogo } from "./brand-logo";
 
 export function Nav() {
   return (
     <header className="fixed top-4 inset-x-0 z-50 flex justify-center px-4">
       <nav className="glass w-full max-w-6xl rounded-full px-5 py-2.5 flex items-center justify-between shadow-soft">
-
         {/* LOGO */}
-        <a href="/" className="shrink-0">
-          <BrandLogo />
-        </a>
+        <Link to="/" className="shrink-0" aria-label="Bedifly Home">
+          <BrandLogo light={false} />
+        </Link>
 
         {/* NAVIGATION */}
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-foreground/80">
-
-          <a
-            href="/#services"
-            className="hover:text-orange transition"
-          >
+          <a href="/#services" className="hover:text-orange transition">
             Services
           </a>
 
-          <a
-            href="/#about"
-            className="hover:text-orange transition"
-          >
+          <a href="/#about" className="hover:text-orange transition">
             About
           </a>
 
-          <a
-            href="/#brands"
-            className="hover:text-orange transition"
-          >
+          <a href="/#brands" className="hover:text-orange transition">
             Brands
           </a>
 
-          <a
-            href="/blogs"
-            className="hover:text-orange transition"
-          >
+          <Link to="/blogs" className="hover:text-orange transition">
             Blogs
-          </a>
+          </Link>
 
-          <a
-            href="/#reviews"
-            className="hover:text-orange transition"
-          >
+          <a href="/#reviews" className="hover:text-orange transition">
             Reviews
           </a>
 
-          <a
-            href="/#contact"
-            className="hover:text-orange transition"
-          >
+          <a href="/#contact" className="hover:text-orange transition">
             Contact
           </a>
-
         </div>
 
         {/* BOOK A CALL */}
@@ -64,7 +44,6 @@ export function Nav() {
         >
           Book a Call
         </a>
-
       </nav>
     </header>
   );

@@ -24,7 +24,12 @@ async function main() {
   await fs.rm("dist/server", { recursive: true, force: true });
 
   // Move the prerendered client bundle to the dist root so index.html sits at the top level.
-  if (await fs.stat(clientDir).then(() => true).catch(() => false)) {
+  if (
+    await fs
+      .stat(clientDir)
+      .then(() => true)
+      .catch(() => false)
+  ) {
     await moveDir(clientDir, distDir);
   }
 

@@ -2,8 +2,7 @@ const DEFAULT_WEBHOOK_URL =
   "https://script.google.com/macros/s/AKfycbxdl3oAYq7RQtpHrtBwKvqcBObLAAnV3KfnST3BNuZ9ooq7YVu7b37GCjgvQMd68NEs/exec";
 
 const WEBHOOK_URL =
-  (import.meta.env["VITE_GOOGLE_SHEETS_WEBHOOK_URL"] as string | undefined) ||
-  DEFAULT_WEBHOOK_URL;
+  (import.meta.env["VITE_GOOGLE_SHEETS_WEBHOOK_URL"] as string | undefined) || DEFAULT_WEBHOOK_URL;
 
 export async function submitLead(data: {
   name: string;

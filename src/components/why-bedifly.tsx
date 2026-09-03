@@ -39,8 +39,7 @@ export function WhyBedifly() {
             Your Business Needs More Than Just Marketing
           </h2>
           <p className="mt-6 text-base md:text-lg text-primary-foreground/70 max-w-md">
-            Getting customers today requires more than running ads or having a
-            website.
+            Getting customers today requires more than running ads or having a website.
           </p>
 
           <div className="mt-8 inline-flex items-center gap-2 text-orange font-semibold text-lg">
@@ -56,13 +55,11 @@ export function WhyBedifly() {
               key={p.q}
               className="rounded-2xl p-5 bg-white/[0.06] border border-white/10 hover:bg-white/[0.1] hover:border-orange/40 transition-colors"
             >
-
               <div className="flex items-start gap-3">
                 <ArrowRight className="mt-1 h-5 w-5 shrink-0 text-orange" />
                 <div>
                   <p className="font-semibold text-primary-foreground/95">{p.q}</p>
                   <p className="text-sm text-primary-foreground/65 mt-1">{p.a}</p>
-
                 </div>
               </div>
             </div>

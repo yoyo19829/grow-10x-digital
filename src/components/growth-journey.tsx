@@ -82,7 +82,8 @@ export function GrowthJourney() {
             How We <span className="text-gradient-orange">Drive Growth</span>
           </h2>
           <p className="mt-5 text-base md:text-lg text-muted-foreground leading-relaxed">
-            We connect marketing, technology, and AI into one integrated growth system—designed to take a potential customer from the first interaction to measurable business revenue.
+            We connect marketing, technology, and AI into one integrated growth system—designed to
+            take a potential customer from the first interaction to measurable business revenue.
           </p>
         </div>
 
@@ -199,14 +200,18 @@ export function GrowthJourney() {
                   <div className="mt-6 pt-4 border-t border-border/15 flex items-center justify-between text-xs">
                     <span
                       className={`font-semibold ${
-                        stage.isRevenue ? "text-orange" : "text-navy-deep/60 group-hover:text-orange"
+                        stage.isRevenue
+                          ? "text-orange"
+                          : "text-navy-deep/60 group-hover:text-orange"
                       }`}
                     >
                       {stage.isRevenue ? "Scalable ROI" : `Phase ${stage.step}`}
                     </span>
                     <ArrowRight
                       className={`h-4 w-4 transition-transform group-hover:translate-x-1 ${
-                        stage.isRevenue ? "text-orange" : "text-muted-foreground group-hover:text-orange"
+                        stage.isRevenue
+                          ? "text-orange"
+                          : "text-muted-foreground group-hover:text-orange"
                       }`}
                     />
                   </div>
@@ -215,7 +220,10 @@ export function GrowthJourney() {
                 {/* Mobile/Tablet down arrow connector between cards */}
                 {!isLast && (
                   <div className="xl:hidden flex justify-center py-2 text-orange/60">
-                    <ArrowDown className="h-5 w-5 animate-bounce" style={{ animationDuration: "2.5s" }} />
+                    <ArrowDown
+                      className="h-5 w-5 animate-bounce"
+                      style={{ animationDuration: "2.5s" }}
+                    />
                   </div>
                 )}
               </div>

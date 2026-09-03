@@ -12,16 +12,22 @@ export function About() {
               <div className="mt-8 text-5xl md:text-6xl font-bold leading-none">
                 10<span className="text-orange">x</span>
               </div>
-              <p className="mt-2 text-white/70">Average growth of our top clients within 12 months.</p>
+              <p className="mt-2 text-white/70">
+                Average growth of our top clients within 12 months.
+              </p>
 
               <div className="mt-10 grid grid-cols-2 gap-6">
                 <div>
                   <div className="text-3xl font-bold text-orange">98%</div>
-                  <div className="text-xs text-white/60 uppercase tracking-widest mt-1">Client retention</div>
+                  <div className="text-xs text-white/60 uppercase tracking-widest mt-1">
+                    Client retention
+                  </div>
                 </div>
                 <div>
                   <div className="text-3xl font-bold text-orange">30+</div>
-                  <div className="text-xs text-white/60 uppercase tracking-widest mt-1">Team of specialists</div>
+                  <div className="text-xs text-white/60 uppercase tracking-widest mt-1">
+                    Team of specialists
+                  </div>
                 </div>
               </div>
             </div>
@@ -33,7 +39,8 @@ export function About() {
             About Bedifly
           </div>
           <h2 className="text-4xl md:text-5xl font-extrabold text-navy-deep leading-[1.1]">
-            We don't do <span className="line-through text-muted-foreground">vanity metrics</span>. <br />
+            We don't do <span className="line-through text-muted-foreground">vanity metrics</span>.{" "}
+            <br />
             We do <span className="text-gradient-orange">revenue.</span>
           </h2>
           <p className="mt-6 text-muted-foreground text-lg leading-relaxed">

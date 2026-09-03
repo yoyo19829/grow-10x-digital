@@ -5,7 +5,10 @@ export function Hero() {
   return (
     <section className="bg-hero relative pt-40 pb-28 px-6 overflow-hidden">
       <div className="pointer-events-none absolute -top-24 -left-24 h-96 w-96 rounded-full bg-orange/30 blur-3xl animate-glow-pulse" />
-      <div className="pointer-events-none absolute top-1/3 -right-24 h-[28rem] w-[28rem] rounded-full bg-navy/25 blur-3xl animate-glow-pulse" style={{ animationDelay: "1.5s" }} />
+      <div
+        className="pointer-events-none absolute top-1/3 -right-24 h-[28rem] w-[28rem] rounded-full bg-navy/25 blur-3xl animate-glow-pulse"
+        style={{ animationDelay: "1.5s" }}
+      />
 
       <div className="relative max-w-6xl mx-auto text-center">
         <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-1.5 text-xs font-semibold text-navy-deep mb-8">
@@ -20,10 +23,10 @@ export function Hero() {
         </h1>
 
         <p className="mt-8 max-w-2xl mx-auto text-lg text-muted-foreground">
-          We're Bedifly—a ROI-driven growth company helping businesses scale with
-          performance marketing, technology, and AI. With 10+ years of combined
-          experience, 100+ businesses served, and 7X+ average ROAS, we focus on
-          generating measurable leads, sales, and profitable growth.
+          We're Bedifly—a ROI-driven growth company helping businesses scale with performance
+          marketing, technology, and AI. With 10+ years of combined experience, 100+ businesses
+          served, and 7X+ average ROAS, we focus on generating measurable leads, sales, and
+          profitable growth.
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">

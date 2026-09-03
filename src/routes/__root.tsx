@@ -82,7 +82,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "description", content: "Bedifly performance marketing agency" },
       { name: "author", content: "Bedifly" },
       { property: "og:title", content: "Bedifly — Grow 10x With Performance Marketing" },
-      { property: "og:description", content: "Performance marketing, paid ads, SEO, and creative that scales brands 10x." },
+      {
+        property: "og:description",
+        content: "Performance marketing, paid ads, SEO, and creative that scales brands 10x.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
