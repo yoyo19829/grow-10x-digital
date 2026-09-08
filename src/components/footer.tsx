@@ -12,6 +12,7 @@ export function Footer() {
               paid ads, creative and SEO that compounds.
             </p>
           </div>
+
           <div>
             <div className="text-white font-semibold mb-4">Company</div>
             <ul className="space-y-2 text-sm">
@@ -37,10 +38,14 @@ export function Footer() {
               </li>
             </ul>
           </div>
+
           <div>
             <div className="text-white font-semibold mb-4">Offices</div>
             <ul className="space-y-3 text-sm text-white/60">
-              <li>Ahmedabad — 4th Floor, C Wing, Krish Cubical, Thaltej</li>
+              <li>
+                Ahmedabad — 8th Floor, Kataria Arcade, 801, off Sarkhej - Gandhinagar Highway,
+                Makarba, Ahmedabad, Gujarat 380051
+              </li>
               <li>Indore — 4th Floor, Mangal City, Vijay Nagar</li>
             </ul>
           </div>

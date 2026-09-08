@@ -9,6 +9,10 @@ import shantiJuniors from "@/assets/shanti-juniors.png";
 import iant from "@/assets/iant.png";
 import pinPointAstrology from "@/assets/pin-point-astrology.png";
 
+import elevateLearningHub from "@/assets/elevate-learning-hub.png";
+import primeStoneProjects from "@/assets/prime-stone-projects.png";
+import northstarKitchens from "@/assets/northstar-kitchens.png";
+
 export type Pkg = {
   emoji: string;
   name: string;
@@ -33,6 +37,9 @@ export const clients = [
   { name: "Shanti Juniors", logo: shantiJuniors },
   { name: "IANT", logo: iant },
   { name: "Pin Point Astrology", logo: pinPointAstrology },
+  { name: "Elevate Learning Hub", logo: elevateLearningHub },
+  { name: "PrimeStone Projects", logo: primeStoneProjects },
+  { name: "Northstar Kitchens", logo: northstarKitchens },
 ];
 
 export const packages: Pkg[] = [
@@ -62,6 +69,7 @@ export const packages: Pkg[] = [
       },
     ],
   },
+
   {
     emoji: "📈",
     name: "Lead Generation Momentum",
@@ -91,6 +99,7 @@ export const packages: Pkg[] = [
     ],
     note: "Domain name and hosting will be provided by the client.",
   },
+
   {
     emoji: "♾️",
     name: "Lead Generation Infinity",
@@ -122,6 +131,7 @@ export const packages: Pkg[] = [
     ],
     note: "Domain name and hosting will be provided by the client.",
   },
+
   {
     emoji: "📱",
     name: "Social Media Management",
@@ -147,6 +157,7 @@ export const packages: Pkg[] = [
       },
     ],
   },
+
   {
     emoji: "👑",
     name: "Social Media + Lead Generation Elite",
@@ -164,6 +175,7 @@ export const packages: Pkg[] = [
     ],
     note: "Domain name and hosting will be provided by the client.",
   },
+
   {
     emoji: "🌐",
     name: "Website Starter",
@@ -185,6 +197,7 @@ export const packages: Pkg[] = [
       },
     ],
   },
+
   {
     emoji: "💼",
     name: "Website Business",
@@ -207,6 +220,7 @@ export const packages: Pkg[] = [
       },
     ],
   },
+
   {
     emoji: "🏆",
     name: "Website Premium",
@@ -247,28 +261,102 @@ export const testimonials = [
     name: "Vijay Desai",
     role: "Founder, Indian Property Expert",
   },
+
   {
     quote:
       "Bedifly ke saath kaam karke humein lead quality mein kaafi achha improvement dekhne ko mila. Pehle bahut saare leads sirf enquiry tak hi limited rehte the, lekin ab lagbhag 20% leads site visit tak pahunch rahe hain aur 2% ke aas-paas booking conversion mil raha hai. Sabse achhi baat yeh hai ki unka focus sirf lead quantity par nahi, balki genuine buyers lane par hota hai.",
     name: "Narendra Sharma",
     role: "Founder, Puja Realty",
   },
+
   {
     quote:
       "Travel business always depends on social media engagement and Bedifly knows it very well because of their high engagement reels and Meta ads expertise. I generated 10,000 leads in last 4 months with conversion rate of 5%.",
     name: "Amit Khare",
     role: "Founder, Lake Tours & Travels",
   },
+
   {
     quote:
       "Must try — they are very good in it whatever they do. I am in interior designing business, converting more than 5 clients per month with a project cost around 15 lac+.",
     name: "Divya Jamini",
     role: "Founder, Aristo Spaces",
   },
+
   {
     quote:
       "We are into the loan industry, needing clients all over India for above ₹1 crore residential and commercial loans. Ashutosh sir has helped us a lot in getting loan files at a very affordable lead cost — conversion rate above 4% and we are getting a ROAS of around 1:9 right now.",
     name: "Vishal Reddy",
     role: "Founder, Akshat Financial Services",
+  },
+
+  {
+    quote:
+      "We had a website for years but honestly it wasn't doing much for the business. Bedifly helped us redesign the entire site and made it much easier for customers to understand our services. The new website looks professional, loads quickly and works really well on mobile. Happy with how it turned out.",
+    name: "Jonathan Reed",
+    role: "Partner, Westbridge Advisory",
+  },
+
+  {
+    quote:
+      "I was mainly looking for someone to handle our Meta advertising and that's how we connected with Bedifly. What I liked was that they didn't just keep increasing the number of leads. They actually looked at which leads were converting and adjusted the campaigns accordingly. The quality has definitely improved over the last few months.",
+    name: "Marcus Bennett",
+    role: "Owner, The Grooming District",
+  },
+
+  {
+    quote:
+      "Our old website was very basic and we wanted something that looked more premium. The Bedifly team understood the direction we wanted and came up with a much cleaner design. They were also quite patient with all the small changes we requested during development. Overall, a good experience.",
+    name: "Emily Richardson",
+    role: "Director, Bloom & Beyond",
+  },
+
+  {
+    quote:
+      "We started with Bedifly for lead generation and later got our landing page redesigned as well. That combination worked much better for us because the traffic was going to a page that was actually built around enquiries. Communication has been good and they are fairly quick when we need something changed.",
+    name: "Daniel Foster",
+    role: "Co-Founder, Elevate Learning Hub",
+  },
+
+  {
+    quote:
+      "I have dealt with a few agencies before and usually the biggest problem is communication. With Bedifly, I could actually get in touch with the team and discuss what was happening with the campaigns. We don't get perfect results every month, but the team keeps testing and improving things instead of simply running the same ads.",
+    name: "Rachel Morgan",
+    role: "Managing Partner, Blue Oak Consulting",
+  },
+
+  {
+    quote:
+      "The website was the first project we did with Bedifly. They took our existing content and turned it into something much more polished. After that we also started working with them on digital marketing. It's been useful having the same team handle both because the website and advertising actually work together.",
+    name: "Thomas Walker",
+    role: "Founder, Northstar Kitchens",
+  },
+
+  {
+    quote:
+      "We were getting enquiries through Instagram but there was no proper system behind it. Bedifly helped us set up the campaigns and connect the leads properly. The biggest difference for us is that we don't have to manually manage everything anymore. Leads come in much more systematically now.",
+    name: "Sophia Williams",
+    role: "Owner, The Skin Room",
+  },
+
+  {
+    quote:
+      "Good experience overall. The website looks much better than what we had before and the team helped us make the enquiry process simpler. We also started running paid campaigns after the website was completed. It's still early, but we're already seeing better quality enquiries than we were getting previously.",
+    name: "Matthew Collins",
+    role: "Director, PrimeStone Projects",
+  },
+
+  {
+    quote:
+      "What stood out to me was their approach to the business rather than just the technical work. They asked questions about our customers, our services and where most of our enquiries were coming from before suggesting changes. The website is much more professional now and our online presence finally feels consistent.",
+    name: "Olivia Harris",
+    role: "Founder, Little Steps Academy",
+  },
+
+  {
+    quote:
+      "We approached Bedifly for marketing because referrals alone weren't enough anymore. They helped us with Meta ads, creatives and the landing page. It took some testing in the beginning, but once we found the right audience the campaigns started producing much better enquiries. The team has been supportive throughout.",
+    name: "William Cooper",
+    role: "Managing Director, Heritage Home Solutions",
   },
 ];

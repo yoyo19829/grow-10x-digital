@@ -27,7 +27,7 @@ export function ContactForm() {
           {/* CONTACT DETAILS */}
           <div className="mt-7 max-w-lg space-y-1">
             <ContactRow icon={MapPin} title="Ahmedabad Office">
-              4th Floor, C Wing, Krish Cubical, Thaltej, Ahmedabad
+              8th Floor, Kataria Arcade, 801, Makarba, Ahmedabad, Gujarat 380051
             </ContactRow>
 
             <ContactRow icon={MapPin} title="Indore Office">
@@ -161,7 +161,9 @@ function ContactRow({
       <div className="min-w-0">
         <div className="text-sm font-bold text-navy-deep leading-5">{title}</div>
 
-        <div className="text-xs md:text-sm text-muted-foreground leading-5">{children}</div>
+        <div className="text-xs md:text-sm text-muted-foreground leading-5">
+          {children}
+        </div>
       </div>
     </div>
   );
